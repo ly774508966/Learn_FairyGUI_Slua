@@ -1,0 +1,63 @@
+jcqd5.xml|923|<component size="1136,640">
+  <displayList>
+    <graph id="n1" name="n1" xy="0,0" size="474,640" type="rect"/>
+    <list id="n0" name="list" xy="-2,1" size="472,638" overflow="scroll" margin="0,0,0,0" defaultItem="ui://olan5v3ojcqd6">
+      <relation target="" sidePair="width-width,height-height"/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <component id="n2" name="box" src="jcqd9" xy="652,354"/>
+    <text id="n3" name="n3" xy="518,32" size="557,111" fontSize="24" color="#ffffff" autoSize="none" strokeColor="#000000" text="* Drag vertically to scroll the whole list.&#xA;* Drag horizontally to scroll single item.&#xA;* Hold and drag one item to the green box."/>
+    <text id="n4" name="txt" xy="705,411" size="252,28" fontSize="24" color="#ffffff" autoSize="none" strokeColor="#000000" text=""/>
+    <graph id="n5" name="holder" xy="813,514" size="66,67"/>
+  </displayList>
+</component>jcqd6.xml|1083|<component size="720,88" overflow="scroll" scroll="horizontal" extention="Button">
+  <displayList>
+    <loader id="n0" name="icon" xy="7,8" size="64,64" url="ui://olan5v3ojcqd4" align="center" vAlign="middle" fill="scaleFree"/>
+    <image id="n1" name="n1" src="jcqd3" xy="0,86" size="1000,2">
+      <relation target="" sidePair="width-width,bottom-bottom"/>
+    </image>
+    <component id="n2" name="b0" src="jcqd7" xy="720,0"/>
+    <component id="n3" name="b1" src="jcqd8" xy="860,0"/>
+    <text id="n4" name="title" xy="80,7" size="530,28" fontSize="24" autoSize="height" singleLine="true" text="Item">
+      <relation target="" sidePair="width-width"/>
+    </text>
+    <text id="n5" name="desc" xy="80,44" size="553,28" fontSize="24" color="#cccccc" autoSize="height" text="Message">
+      <relation target="" sidePair="width-width"/>
+    </text>
+    <text id="n6" name="time" xy="626,7" size="82,28" fontSize="24" color="#cccccc" align="right" autoSize="none" text="15:02">
+      <relation target="" sidePair="right-right"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>jcqd7.xml|334|<component size="140,85" extention="Button">
+  <displayList>
+    <graph id="n1" name="n1" xy="0,0" size="140,87" type="rect" lineSize="0" fillColor="#ff666666"/>
+    <text id="n0" name="title" xy="0,26" size="140,32" fontSize="28" color="#ffffff" align="center" autoSize="none" text="Stick"/>
+  </displayList>
+  <Button/>
+</component>jcqd8.xml|335|<component size="140,85" extention="Button">
+  <displayList>
+    <graph id="n0" name="n0" xy="0,0" size="140,87" type="rect" lineSize="0" fillColor="#ffff0000"/>
+    <text id="n1" name="title" xy="0,26" size="140,32" fontSize="28" color="#ffffff" align="center" autoSize="none" text="Delete"/>
+  </displayList>
+  <Button/>
+</component>jcqd9.xml|161|<component size="350,191">
+  <displayList>
+    <graph id="n0" name="n0" xy="0,0" size="350,191" type="rect" fillColor="#ff006633"/>
+  </displayList>
+</component>package.xml|614|<packageDescription id="olan5v3o" name="ScrollPane">
+  <resources>
+    <atlas id="atlas0" size="128,128" file="atlas0.png"/>
+    <atlas id="atlas1" size="64,32" file="atlas1.png"/>
+    <component id="jcqd5" name="Main" exported="true" size="1136,640"/>
+    <component id="jcqd6" name="item" size="720,88"/>
+    <component id="jcqd7" name="Button1" size="140,85"/>
+    <component id="jcqd8" name="Button2" size="140,85"/>
+    <component id="jcqd9" name="Box" size="350,191"/>
+    <image id="jcqd3" name="Seperator1" size="39,2"/>
+    <image id="jcqd4" name="logo" size="86,86"/>
+  </resources>
+</packageDescription>

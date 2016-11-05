@@ -1,0 +1,55 @@
+89hp3.xml|245|<component size="363,505" extention="Button">
+  <displayList>
+    <loader id="n1" name="icon" xy="0,0" pivot="0.5,0.5" size="363,505"/>
+    <image id="n2" name="n2" src="89hp1" xy="0,0" pivot="0.5,0.5"/>
+  </displayList>
+  <Button/>
+</component>89hp4.xml|586|<component size="1136,640">
+  <displayList>
+    <component id="n0" name="n0" src="89hp3" xy="114,99">
+      <Button icon="ui://uqtqvlfd89hp0"/>
+    </component>
+    <component id="n1" name="n1" src="89hp3" xy="656,90">
+      <Button icon="ui://uqtqvlfd89hp2"/>
+    </component>
+    <text id="n2" name="n2" xy="196,27" size="230,34" fontSize="30" color="#ffffff" autoSize="none" text="Common Effect"/>
+    <text id="n3" name="n3" xy="655,6" size="366,75" fontSize="30" color="#ffffff" autoSize="none" text="Simulate Perspertive&#xA;in Orthographic Camera"/>
+  </displayList>
+</component>package.xml|714|<packageDescription id="uqtqvlfd" name="TurnCard">
+  <resources>
+    <atlas id="atlas0" size="1024,1024" file="atlas0.png"/>
+    <component id="89hp3" name="CardComponent" size="363,505"/>
+    <component id="89hp4" name="Main" exported="true" size="1136,640"/>
+    <component id="q51l5" name="Card_01" size="363,505"/>
+    <component id="q51l6" name="Card_02" size="363,505"/>
+    <component id="q51l9" name="Card_Comp" size="363,505"/>
+    <component id="q51la" name="OnecardMain" exported="true" size="1136,640"/>
+    <image id="89hp0" name="card_a" size="363,505"/>
+    <image id="89hp1" name="card_back" size="362,505"/>
+    <image id="89hp2" name="card_k" size="363,505"/>
+  </resources>
+</packageDescription>q51l5.xml|233|<component size="363,505" pivot="0.5,0.5">
+  <displayList>
+    <image id="n1" name="n1" src="89hp2" xy="0,0"/>
+    <graph id="n2" name="n2" xy="148,204" size="100,100" type="rect" fillColor="#ff33ff99"/>
+  </displayList>
+</component>q51l6.xml|601|<component size="363,505" pivot="0.5,0.5">
+  <displayList>
+    <image id="n0" name="n0" src="89hp0" xy="0,0"/>
+    <graph id="n1" name="n1" xy="21,54" size="100,100" type="rect" fillColor="#ffff9933"/>
+    <graph id="n2" name="n2" xy="119,150" size="100,100" type="rect" fillColor="#ffff9933"/>
+    <graph id="n3" name="n3" xy="222,250" size="100,100" type="rect" fillColor="#ffff9933"/>
+    <graph id="n4" name="n4" xy="219,56" size="100,100" type="rect" fillColor="#ffff9933"/>
+    <graph id="n5" name="n5" xy="22,251" size="100,100" type="rect" fillColor="#ffff9933"/>
+  </displayList>
+</component>q51l9.xml|247|<component size="363,505" extention="Button">
+  <displayList>
+    <component id="n0" name="n0" src="q51l5" xy="0,0" pivot="0.5,0.5"/>
+    <component id="n1" name="n1" src="q51l6" xy="0,0" pivot="0.5,0.5"/>
+  </displayList>
+  <Button/>
+</component>q51la.xml|132|<component size="1136,640">
+  <displayList>
+    <component id="n0" name="n0" src="q51l9" xy="341,63"/>
+  </displayList>
+</component>

@@ -1,0 +1,18 @@
+gx2b78.xml|304|<component size="1136,570">
+  <displayList>
+    <component id="n1" name="b" src="gx2b79" xy="154,137">
+      <Button title="B" icon="ui://9leh0eyfwa8u2t"/>
+    </component>
+    <component id="n2" name="c" src="gx2b79" xy="278,141">
+      <Button title="C"/>
+    </component>
+  </displayList>
+</component>package.xml|477|<packageDescription id="9leh0eyf" name="Basics">
+  <resources>
+    <atlas id="atlas0" size="256,256" file="atlas0.png"/>
+    <component id="gx2b78" name="Demo_Drag&amp;Drop" exported="true" size="1136,570"/>
+    <image id="l6f470" name="a8.png" size="88,20" scale="9grid" scale9grid="8,5,70,10" exported="true"/>
+    <image id="wa8u2t" name="r3" size="90,90" exported="true"/>
+    <image id="wa8u2u" name="r4" size="89,90" exported="true"/>
+  </resources>
+</packageDescription>

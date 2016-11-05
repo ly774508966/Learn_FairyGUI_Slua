@@ -1,0 +1,65 @@
+duwkj.xml|462|<movieclip interval="166" frameCount="12">
+  <frames>
+    <frame rect="17,18,86,85"/>
+    <frame rect="18,18,84,84"/>
+    <frame rect="18,19,84,80"/>
+    <frame rect="17,17,86,75"/>
+    <frame rect="12,14,96,91"/>
+    <frame rect="4,5,112,110"/>
+    <frame rect="0,0,120,119"/>
+    <frame rect="18,17,84,85"/>
+    <frame rect="18,24,84,78"/>
+    <frame rect="17,31,86,72"/>
+    <frame rect="12,17,96,91"/>
+    <frame rect="5,5,110,109"/>
+  </frames>
+</movieclip>duwkl.xml|255|<component size="130,130" extention="Button">
+  <displayList>
+    <image id="n0" name="n0" src="duwkk" xy="22,15"/>
+    <movieclip id="n1" name="n1" src="duwkj" xy="0,0"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.80"/>
+</component>fm8x7.xml|539|<component size="800,600">
+  <displayList>
+    <component id="n6" name="label_long" src="hx0wg" xy="322,279" size="300,29">
+      <Label title="&lt;-- 世界还小我陪你去看天涯海角 -->"/>
+    </component>
+    <component id="n12" name="label_short" src="hx0wg" xy="315,393">
+      <Label title="&lt;-- 中华人民共和国 -->"/>
+    </component>
+    <component id="n14" name="textfield" src="xunzh" xy="19,30"/>
+    <image id="n15" name="image_origin" src="fm8x1" xy="58,273"/>
+    <component id="n16" name="n16" src="duwkl" xy="517,76"/>
+  </displayList>
+</component>hx0wg.xml|797|<component size="135,50" extention="Label" mask="n1">
+  <displayList>
+    <text id="n0" name="title" xy="0,0" size="434,30" font="迷你简铁筋隶书" fontSize="24" color="#ff3366" bold="true" text="&lt;--世界还小我陪你去到天涯海角-->"/>
+    <graph id="n1" name="mask" xy="0,-32" size="146,90" type="rect"/>
+  </displayList>
+  <transition name="label_move" autoPlayRepeat="-1">
+    <item time="0" type="XY" target="n0" label="first_pos" tween="true" startValue="0,-" endValue="-299,-" duration="72" ease="Linear" label2="last_pos"/>
+    <item time="72" type="XY" target="n0" label="last_pos" tween="true" startValue="-299,-" endValue="0,-" duration="72" ease="Linear" label2="star_pos"/>
+    <item time="144" type="XY" target="n0" label="star_pos" tween="true" startValue="0,-" ease="Linear"/>
+  </transition>
+</component>package.xml|942|<packageDescription id="ju4y74ou" name="MyDragAndDrop">
+  <resources>
+    <atlas id="atlas0" size="512,512" file="atlas0.png"/>
+    <component id="duwkl" name="BagComp" size="130,130"/>
+    <component id="fm8x7" name="drag_and_drop" exported="true" size="800,600"/>
+    <component id="hx0wg" name="label" size="135,50"/>
+    <component id="xunzh" name="TextFieldComp" size="400,200"/>
+    <image id="duwkk" name="btnimage" size="86,99"/>
+    <image id="fm8x1" name="k2" size="100,100" exported="true"/>
+    <image id="fm8x2" name="k0" size="90,91" exported="true"/>
+    <image id="fm8x5" name="huawen1.png" size="85,59" exported="true"/>
+    <image id="fm8x8" name="r3" size="90,90" exported="true"/>
+    <image id="fm8x9" name="r4" size="89,90" exported="true"/>
+    <image id="t4mvf" name="SSII_UI_Button_UMagic_BG" size="125,125" exported="true"/>
+    <movieclip id="duwkj" name="quan" size="120,119"/>
+  </resources>
+</packageDescription>xunzh.xml|314|<component size="400,200">
+  <displayList>
+    <graph id="n0" name="n0" xy="0,0" size="400,200" type="rect" fillColor="#ffffcc66"/>
+    <text id="n1" name="n1" xy="35,54" size="329,92" input="true" font="迷你简铁筋隶书" fontSize="26" color="#3300ff" autoSize="none" bold="true" text="sdf "/>
+  </displayList>
+</component>
