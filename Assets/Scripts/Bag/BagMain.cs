@@ -8,6 +8,16 @@ public class BagMain : MonoBehaviour {
     GComponent _mainView;
     BagWindow _bagWindow;
 
+
+    GProgressBar progress_bar;
+    GGraph bar_graph;
+    GImage yellow_img;
+    GSlider slider;
+    GSlider slider_02;
+    GImage slider_02_img;
+
+    GComponent grop_com;
+
     void Awake()
     {
         //UIObjectFactory.SetLoaderExtension(typeof(MyGLoader));
@@ -17,6 +27,35 @@ public class BagMain : MonoBehaviour {
         Application.targetFrameRate = 60;
         GRoot.inst.SetContentScaleFactor(1136, 640);
         _mainView = this.GetComponent<UIPanel>().ui;
+
+        progress_bar = _mainView.GetChild("progress_01").asProgress;
+        progress_bar.value = 30;
+
+        bar_graph = progress_bar.GetChild("bar").asGraph;
+       
+
+        yellow_img = _mainView.GetChild("image").asImage;
+        
+
+
+        slider = _mainView.GetChild("slider01").asSlider;
+        slider.onChanged.Add(__sliderChanged);
+
+        slider_02 = _mainView.GetChild("slider02").asSlider;
+
+        grop_com = slider_02.GetChild("grip").asCom;
+        slider_02_img = grop_com.GetChild("n4").asImage;
+
+        GImage image_origin = _mainView.GetChild("image_origin").asImage;
+        if (image_origin == null)
+        {
+            Debug.Log("image_origin...is nulll..");
+        }
+        image_origin.fillAmount = 0.2f;
+
+        Debug.Log(image_origin.fillAmount);
+
+        /*
 
         //---- long
         GComponent label_long_comp = _mainView.GetChild("label_long").asCom;
@@ -62,8 +101,34 @@ public class BagMain : MonoBehaviour {
         GImage image_origin = _mainView.GetChild("image_origin").asImage;
         NTexture texture = new NTexture(new Texture2D(100, 100) as Texture);
         image_origin.texture = texture;
-        
+        */
 	}
+
+    void __sliderChanged(EventContext context)
+    {
+        float slider_value = slider.value;
+        progress_bar.value = slider_value;
+
+        slider_02.value = slider_value;
+
+        float width = bar_graph.width;
+        Vector2 bar_pos = bar_graph.LocalToGlobal(bar_graph.position);
+
+        yellow_img.SetXY(bar_pos.x + width/2, bar_pos.y);
+
+        if (slider_02_img == null)
+        {
+            Debug.Log("img is nullllll");
+        }
+
+        Debug.Log(slider_value / 2);
+
+        slider_02_img.fillAmount = slider_value / 2 / 100;
+
+        float slider_02_img_width = slider_02_img.width;
+        grop_com.width = slider_02_img_width;
+
+    }
 
     void __changed(EventContext context)
     {
