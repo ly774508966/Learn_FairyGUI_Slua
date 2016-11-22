@@ -29,28 +29,30 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
     <movieclip id="n1" name="n1" src="duwkj" xy="0,0"/>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.80"/>
-</component>fm8x7.xml|1130|<component size="800,600">
+</component>fm8x7.xml|1491|<component size="800,600">
   <displayList>
-    <component id="n6" name="label_long" src="hx0wg" xy="322,279" size="300,29">
+    <component id="n6" name="label_long" src="hx0wg" xy="128,472" size="300,29" visible="false">
       <Label title="&lt;-- 世界还小我陪你去看天涯海角 -->"/>
     </component>
-    <component id="n12" name="label_short" src="hx0wg" xy="315,393">
+    <component id="n12" name="label_short" src="hx0wg" xy="315,393" visible="false">
       <Label title="&lt;-- 中华人民共和国 -->"/>
     </component>
-    <component id="n14" name="textfield" src="xunzh" xy="19,30"/>
-    <image id="n15" name="image_origin" src="fm8x1" xy="58,273" fillMethod="hz"/>
-    <component id="n16" name="n16" src="duwkl" xy="517,76"/>
-    <graph id="n18" name="hodler" xy="230,195" size="65,58"/>
-    <component id="n19" name="progress_01" src="dhbhm" xy="331,506" size="233,48">
-      <ProgressBar value="89" max="100"/>
+    <component id="n14" name="textfield" src="xunzh" xy="19,30" visible="false"/>
+    <image id="n15" name="image_origin" src="fm8x1" xy="58,273" visible="false" fillMethod="hz"/>
+    <component id="n16" name="n16" src="duwkl" xy="482,30" visible="false"/>
+    <graph id="n18" name="hodler" xy="49,191" size="65,58" visible="false"/>
+    <component id="n19" name="progress_01" src="dhbhm" xy="80,367" size="567,48">
+      <ProgressBar value="1" max="100"/>
     </component>
-    <image id="n21" name="image" src="fm8x2" xy="465,447" size="90,46" fillMethod="hz" fillAmount="52"/>
-    <component id="n23" name="slider01" src="gtg9o" xy="86,436" size="45,36">
+    <image id="n21" name="image" src="fm8x2" xy="465,447" size="90,46" visible="false" fillMethod="hz" fillAmount="52"/>
+    <component id="n23" name="slider01" src="gtg9o" xy="86,436" size="45,36" visible="false">
       <Slider value="50" max="100"/>
     </component>
-    <component id="n25" name="slider02" src="gtg9q" xy="113,518" size="181,63">
+    <component id="n25" name="slider02" src="gtg9q" xy="113,518" size="181,63" visible="false">
       <Slider value="57" max="100"/>
     </component>
+    <component id="n26" name="my_button" src="km0cr" xy="574,234" size="128,49"/>
+    <text id="n27" name="type_text" xy="133,184" size="400,58" fontSize="16" align="center" vAlign="middle" autoSize="none" text="type"/>
   </displayList>
 </component>gtg9n.xml|868|<component size="10,19" extention="Button">
   <Button/>
@@ -103,7 +105,7 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
     </image>
   </displayList>
   <Button/>
-</component>gtg9q.xml|709|<component size="102,10" extention="Slider">
+</component>gtg9q.xml|843|<component size="102,10" extention="Slider">
   <displayList>
     <graph id="n1" name="n1" xy="0,0" size="103,10" type="rect" lineColor="#ffa0a0a0" fillColor="#ff3333ff">
       <relation target="" sidePair="width-width,height-height"/>
@@ -115,6 +117,9 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
       <relation target="n2" sidePair="right-right"/>
       <relation target="" sidePair="height-height"/>
     </component>
+    <image id="n6" name="grip" src="fm8x2" xy="94,-4" size="90,19">
+      <relation target="" sidePair="height-height"/>
+    </image>
   </displayList>
   <Slider/>
   <relation target="" sidePair="width-width,height-height"/>
@@ -128,7 +133,24 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
     <item time="72" type="XY" target="n0" label="last_pos" tween="true" startValue="-299,-" endValue="0,-" duration="72" ease="Linear" label2="star_pos"/>
     <item time="144" type="XY" target="n0" label="star_pos" tween="true" startValue="0,-" ease="Linear"/>
   </transition>
-</component>package.xml|1249|<packageDescription id="ju4y74ou" name="MyDragAndDrop">
+</component>km0cr.xml|930|<component size="100,20" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <graph id="n1" name="n1" xy="0,0" size="100,20" touchable="false" type="rect" lineSize="0" fillColor="#ffff99cc">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n2" name="n2" xy="0,0" size="100,20" touchable="false" type="rect" lineSize="0" fillColor="#ffff99cc">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <graph id="n3" name="n3" xy="0,0" size="100,20" touchable="false" type="rect" lineSize="0" fillColor="#ffffcc99">
+      <gearDisplay controller="button" pages="1,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+  </displayList>
+  <Button/>
+</component>package.xml|1306|<packageDescription id="ju4y74ou" name="MyDragAndDrop">
   <resources>
     <atlas id="atlas0" size="512,512" file="atlas0.png"/>
     <component id="dhbhm" name="MyProgressBar" size="50,10"/>
@@ -139,6 +161,7 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
     <component id="gtg9p" name="MySlider222_grip" size="31,19"/>
     <component id="gtg9q" name="MySlider222" size="102,10"/>
     <component id="hx0wg" name="label" size="135,50"/>
+    <component id="km0cr" name="Button1" size="100,20"/>
     <component id="xunzh" name="TextFieldComp" size="400,200"/>
     <image id="duwkk" name="btnimage" size="86,99"/>
     <image id="fm8x1" name="k2" size="100,100" exported="true"/>
