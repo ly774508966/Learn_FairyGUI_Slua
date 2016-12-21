@@ -1,0 +1,46 @@
+flddc.xml|311|<component size="1920,1080">
+  <displayList>
+    <graph id="n1" name="n1" xy="381,207" size="1080,712" type="rect" fillColor="#ffccffff"/>
+    <list id="n0" name="n0" xy="381,207" size="779,712" layout="flow_hz" overflow="scroll" margin="0,0,0,0" defaultItem="ui://sndtfbfwkuwoa"/>
+  </displayList>
+</component>kuwoa.xml|1435|<component size="380,125" extention="Button">
+  <controller name="c1" pages="0,未领,1,已领" selected="0"/>
+  <controller name="IsRead" pages="0,未读,1,已读" selected="0"/>
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n2" name="n2" src="kuwo8" xy="0,0" size="380,125"/>
+    <image id="n10" name="n10" src="kuwo7" xy="0,0" size="380,125">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+    <image id="n3" name="n3" src="kuwo6" xy="29,27"/>
+    <image id="n5" name="n5" src="kuwo4" xy="39,42">
+      <gearDisplay controller="IsRead" pages="0"/>
+    </image>
+    <text id="n6" name="timeText" xy="133,44" size="221,26" fontSize="22" color="#0000cc" vAlign="middle" autoSize="none" text=""/>
+    <text id="n7" name="title" xy="132,80" size="221,26" fontSize="12" color="#006666" autoSize="none" text=""/>
+    <image id="n9" name="n9" src="kuwo5" xy="38,35">
+      <gearDisplay controller="IsRead" pages="1"/>
+    </image>
+    <image id="n8" name="n8" src="kuwo3" xy="230,4" size="143,120">
+      <gearDisplay controller="c1" pages="0,1"/>
+      <gearXY controller="c1" pages="1" values="230,4" default="230,4" tween="true"/>
+    </image>
+  </displayList>
+  <Button/>
+  <transition name="t0">
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="24"/>
+    <item time="0" type="Visible" value="true"/>
+  </transition>
+</component>package.xml|680|<packageDescription id="sndtfbfw" name="Extension">
+  <resources>
+    <atlas id="atlas0" size="256,256" file="atlas0.png"/>
+    <component id="flddc" name="mailpanel" exported="true" size="1920,1080"/>
+    <component id="kuwoa" name="mailItem" size="380,125"/>
+    <image id="kuwo3" name="gsiaf" size="143,120"/>
+    <image id="kuwo4" name="gsiae" size="55,47"/>
+    <image id="kuwo5" name="gsiad" size="55,59"/>
+    <image id="kuwo6" name="gsiac" size="71,71"/>
+    <image id="kuwo7" name="gsia9" size="108,108" scale="9grid" scale9grid="17,16,74,73"/>
+    <image id="kuwo8" name="gsia8" size="78,141" scale="9grid" scale9grid="25,26,26,90"/>
+  </resources>
+</packageDescription>

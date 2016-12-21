@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 
 namespace FairyGUI
 {
@@ -65,6 +63,11 @@ namespace FairyGUI
 		/// Scrolling step in pixels
 		/// </summary>
 		public static float defaultScrollSpeed = 25;
+
+		/// <summary>
+		/// Speed ratio of scrollpane when its touch dragging.
+		/// </summary>
+		public static float defaultTouchScrollSpeedRatio = 1;
 
 		/// <summary>
 		/// Scrollbar display mode. Recommended 'Auto' for mobile and 'Visible' for web.

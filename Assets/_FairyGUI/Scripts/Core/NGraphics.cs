@@ -84,6 +84,16 @@ namespace FairyGUI
 		/// </summary>
 		public Vector3? cameraPosition;
 
+		/// <summary>
+		/// 
+		/// </summary>
+		public delegate void MeshModifier();
+
+		/// <summary>
+		/// 当Mesh更新时被调用
+		/// </summary>
+		public MeshModifier meshModifier;
+
 		NTexture _texture;
 		string _shader;
 		Material _material;
@@ -321,6 +331,7 @@ namespace FairyGUI
 			meshRenderer = null;
 			meshFilter = null;
 			_stencilEraser = null;
+			meshModifier = null;
 		}
 
 		/// <summary>
@@ -459,6 +470,10 @@ namespace FairyGUI
 		/// </summary>
 		public void UpdateMesh()
 		{
+			if (meshModifier != null)
+				meshModifier();
+
+			Vector3[] vertices = this.vertices;
 			vertCount = vertices.Length;
 			if (vertexMatrix != null)
 			{
@@ -481,6 +496,7 @@ namespace FairyGUI
 				}
 			}
 
+			Color32[] colors = this.colors;
 			for (int i = 0; i < vertCount; i++)
 			{
 				Color32 col = colors[i];
@@ -1027,13 +1043,13 @@ namespace FairyGUI
 		public StencilEraser(Transform parent)
 		{
 			gameObject = new GameObject("Eraser");
-			FairyGUI.Utils.ToolSet.SetParent(gameObject.transform, parent);
+			ToolSet.SetParent(gameObject.transform, parent);
 			meshFilter = gameObject.AddComponent<MeshFilter>();
 			meshRenderer = gameObject.AddComponent<MeshRenderer>();
 #if UNITY_5
 			meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
 #else
-            meshRenderer.castShadows = false;
+			meshRenderer.castShadows = false;
 #endif
 			meshRenderer.receiveShadows = false;
 

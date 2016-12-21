@@ -11,7 +11,7 @@ namespace FairyGUI
 		/// GObject的id，仅作为内部使用。与name不同，id值是不会相同的。
 		/// id is for internal use only.
 		/// </summary>
-		public string id { get; internal set; }
+		public string id { get; private set; }
 
 		/// <summary>
 		/// Name of the object.
@@ -26,22 +26,22 @@ namespace FairyGUI
 		/// <summary>
 		/// The source width of the object.
 		/// </summary>
-		public int sourceWidth { get; internal set; }
+		public int sourceWidth { get; protected set; }
 
 		/// <summary>
 		/// The source height of the object.
 		/// </summary>
-		public int sourceHeight { get; internal set; }
+		public int sourceHeight { get; protected set; }
 
 		/// <summary>
 		/// The initial width of the object.
 		/// </summary>
-		public int initWidth { get; internal set; }
+		public int initWidth { get; protected set; }
 
 		/// <summary>
 		/// The initial height of the object.
 		/// </summary>
-		public int initHeight { get; internal set; }
+		public int initHeight { get; protected set; }
 
 		/// <summary>
 		/// Relations Object.
@@ -61,7 +61,7 @@ namespace FairyGUI
 		/// <summary>
 		/// Parent object.
 		/// </summary>
-		public GComponent parent { get; internal set; }
+		public GComponent parent { get; private set; }
 
 		/// <summary>
 		/// Lowlevel display object.
@@ -880,18 +880,6 @@ namespace FairyGUI
 			}
 		}
 
-		virtual public IFilter filter
-		{
-			get { return displayObject != null ? displayObject.filter : null; }
-			set { if (displayObject != null) displayObject.filter = value; }
-		}
-
-		virtual public BlendMode blendMode
-		{
-			get { return displayObject != null ? displayObject.blendMode : BlendMode.None; }
-			set { if (displayObject != null) displayObject.blendMode = value; }
-		}
-
 		private void __rollOver()
 		{
 			this.root.ShowTooltips(tooltips);
@@ -900,6 +888,54 @@ namespace FairyGUI
 		private void __rollOut()
 		{
 			this.root.HideTooltips();
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		virtual public IFilter filter
+		{
+			get { return displayObject != null ? displayObject.filter : null; }
+			set { if (displayObject != null) displayObject.filter = value; }
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		virtual public BlendMode blendMode
+		{
+			get { return displayObject != null ? displayObject.blendMode : BlendMode.None; }
+			set { if (displayObject != null) displayObject.blendMode = value; }
+		}
+
+		/// <summary>
+		/// 设定GameObject的名称
+		/// </summary>
+		public string gameObjectName
+		{
+			get
+			{
+				if (displayObject != null)
+					return displayObject.gameObject.name;
+				else
+					return null;
+			}
+
+			set
+			{
+				if (displayObject != null)
+					displayObject.gameObject.name = value;
+			}
+		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="obj"></param>
+		public void SetHome(GObject obj)
+		{
+			if (displayObject != null && obj.displayObject != null)
+				displayObject.home = obj.displayObject.cachedTransform;
 		}
 
 		/// <summary>
@@ -1344,7 +1380,7 @@ namespace FairyGUI
 			RemoveFromParent();
 			RemoveEventListeners();
 			relations.Dispose();
-			if (displayObject != null && !displayObject.isDisposed)
+			if (displayObject != null)
 			{
 				displayObject.gOwner = null;
 				displayObject.Dispose();
@@ -1428,6 +1464,11 @@ namespace FairyGUI
 
 		virtual protected void CreateDisplayObject()
 		{
+		}
+
+		internal void InternalSetParent(GComponent value)
+		{
+			parent = value;
 		}
 
 		virtual protected void HandlePositionChanged()

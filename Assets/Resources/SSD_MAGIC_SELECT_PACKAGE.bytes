@@ -1,0 +1,356 @@
+i6vg11.xml|2240|<component size="174,186" extention="Button">
+  <controller name="skill_num" pages="0,show,1,hide" selected="0"/>
+  <controller name="installed" pages="1,no_installed,0,installed" selected="0"/>
+  <controller name="selected" pages="0,normal,1,selected" selected="0"/>
+  <displayList>
+    <image id="n0" name="n0" src="tr1md" pkg="7g9sac5d" xy="0,15" size="174,174">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n4" name="skill_quality_com" src="i6vg18" xy="7,22" size="158,158">
+      <relation target="n7" sidePair="center-center%,middle-middle%"/>
+      <relation target="n7" sidePair="width-width%,height-height%"/>
+    </component>
+    <loader id="n7" name="icon" xy="2,16" size="170,170" align="center" vAlign="middle" fill="scale">
+      <relation target="" sidePair="width-width%,height-height%"/>
+      <relation target="" sidePair="center-center%,middle-middle%"/>
+    </loader>
+    <image id="n8" name="n8" src="tr1m3" pkg="7g9sac5d" xy="52,154" size="69,30" group="n11" alpha="0.5">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </image>
+    <text id="n10" name="title" xy="54,145" size="66,50" group="n11" font="迷你简铁筋隶书" fontSize="36" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="15&#xA;">
+      <relation target="n8" sidePair="width-width,height-height"/>
+    </text>
+    <group id="n11" name="skill_num" xy="52,145" size="69,50" advanced="true">
+      <gearDisplay controller="skill_num" pages="0"/>
+    </group>
+    <image id="n12" name="skill_selected_circle" src="tr1m7" pkg="7g9sac5d" xy="-7,8" size="185,185">
+      <gearDisplay controller="selected" pages="1"/>
+      <relation target="n7" sidePair="center-center,middle-middle"/>
+      <relation target="n7" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n2" name="skill_stars" src="i6vg13" xy="19,3" size="134,45">
+      <relation target="" sidePair="center-center"/>
+    </component>
+    <image id="n14" name="n14" src="jrwr3t" pkg="7g9sac5d" xy="20,124">
+      <gearDisplay controller="installed" pages="0"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>i6vg13.xml|1250|<component size="129,45">
+  <controller name="star_num" pages="3,no_star,0,one_star,1,two_star,2,three_star" selected="1"/>
+  <displayList>
+    <image id="n3" name="n3" src="tr1m1j" pkg="7g9sac5d" xy="0,-3" size="51,52">
+      <gearDisplay controller="star_num" pages="1,2"/>
+      <gearXY controller="star_num" pages="3,1,2" values="-2,-3|17,-3|-2,-3" default="0,-3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="left-left"/>
+    </image>
+    <image id="n4" name="n4" src="tr1m1j" pkg="7g9sac5d" xy="39,-3" size="51,52">
+      <gearDisplay controller="star_num" pages="0,2"/>
+      <gearXY controller="star_num" pages="3,0,2" values="39,-3|39,-3|41,-3" default="43,-3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center"/>
+    </image>
+    <image id="n5" name="n5" src="tr1m1j" pkg="7g9sac5d" xy="81,-1" size="51,52">
+      <gearDisplay controller="star_num" pages="1,2"/>
+      <gearXY controller="star_num" pages="3,1,2" values="82,-3|61,-3|83,-3" default="81,-1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="right-right"/>
+    </image>
+  </displayList>
+</component>i6vg18.xml|1039|<component size="158,158">
+  <controller name="skill_quality" pages="4,none,0,white,1,orange,3,yellow,2,black" selected="0"/>
+  <displayList>
+    <image id="n1" name="n1" src="tr1ma" pkg="7g9sac5d" xy="0,0" size="158,158">
+      <gearDisplay controller="skill_quality" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n0" name="n0" src="tr1m9" pkg="7g9sac5d" xy="0,0" size="158,158">
+      <gearDisplay controller="skill_quality" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2" name="n2" src="tr1mb" pkg="7g9sac5d" xy="0,0" size="158,158">
+      <gearDisplay controller="skill_quality" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3" name="n3" src="tr1m8" pkg="7g9sac5d" xy="0,0" size="158,158">
+      <gearDisplay controller="skill_quality" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+</component>i6vg1b.xml|636|<component size="320,80" extention="Button">
+  <displayList>
+    <image id="n2" name="n2" src="tr1mw" pkg="7g9sac5d" xy="-7,-9" alpha="0.99">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3" name="title" xy="62,14" size="195,53" font="迷你简铁筋隶书" fontSize="46" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="自选组合">
+      <relation target="" sidePair="width-width,height-height"/>
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </text>
+  </displayList>
+  <Button sound="ui://7duwokd2kr5025" downEffect="scale" downEffectValue="0.95"/>
+</component>i6vg1c.xml|461|<component size="96,589" extention="Label">
+  <displayList>
+    <image id="n0" name="n0" src="tr1mc" pkg="7g9sac5d" xy="0,0"/>
+    <loader id="n1" name="icon" xy="-2,-2" size="99,92" align="center" vAlign="middle"/>
+    <image id="n2" name="n2" src="tr1m11" pkg="7g9sac5d" xy="-53,110"/>
+    <image id="n3" name="n3" src="tr1m11" pkg="7g9sac5d" xy="-52,315"/>
+    <image id="n4" name="n4" src="tr1m11" pkg="7g9sac5d" xy="-52,523"/>
+  </displayList>
+</component>i6vg1d.xml|888|<component size="730,90">
+  <displayList>
+    <image id="n1" name="n1" src="tr1mh" pkg="7g9sac5d" xy="18,0"/>
+    <image id="n2" name="n2" src="tr1m3" pkg="7g9sac5d" xy="12,7"/>
+    <image id="n4" name="n4" src="tr1mh" pkg="7g9sac5d" xy="18,77" flip="vt"/>
+    <component id="n5" name="btn_pre_page" src="i6vg1e" xy="-1,-5">
+      <Button sound="ui://7duwokd2kr5026" volume="35"/>
+    </component>
+    <component id="n7" name="btn_next_page" src="i6vg1f" xy="621,-5">
+      <Button sound="ui://7duwokd2kr5026" volume="50"/>
+    </component>
+    <image id="n9" name="n9" src="l03w2i" pkg="7g9sac5d" xy="151,9"/>
+    <text id="n10" name="skill_type_title" xy="220,24" size="407,49" font="迷你简铁筋隶书" fontSize="42" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="">
+      <relation target="n9" sidePair="left-right,middle-middle"/>
+    </text>
+  </displayList>
+</component>i6vg1e.xml|290|<component size="114,100" extention="Button">
+  <displayList>
+    <image id="n0" name="n0" src="tr1m15" pkg="7g9sac5d" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.95"/>
+</component>i6vg1f.xml|300|<component size="114,100" extention="Button">
+  <displayList>
+    <image id="n0" name="n0" src="tr1m15" pkg="7g9sac5d" xy="0,0" flip="hz">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.95"/>
+</component>i6vgx.xml|141|<component size="493,837">
+  <displayList>
+    <image id="n0" name="n0" src="tr1mo" pkg="7g9sac5d" xy="-3,-4"/>
+  </displayList>
+</component>i6vgy.xml|515|<component size="425,71" extention="Label">
+  <displayList>
+    <image id="n0" name="icon" src="l03w2i" pkg="7g9sac5d" xy="-6,-2">
+      <relation target="" sidePair="left-left"/>
+    </image>
+    <text id="n2" name="title" xy="39,4" size="382,68" font="迷你简铁筋隶书" fontSize="42" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="右腕之咒血">
+      <relation target="n0" sidePair="left-right,middle-middle"/>
+      <relation target="" sidePair="rightext-right"/>
+    </text>
+  </displayList>
+</component>i6vgz.xml|2871|<component size="458,225">
+  <displayList>
+    <text id="n0" name="basic_hurt_title" xy="28,18" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="威力"/>
+    <text id="n2" name="num_title" xy="28,63" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="次数"/>
+    <text id="n3" name="live_time_title" xy="28,113" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="时长"/>
+    <text id="n4" name="distance_max_title" xy="28,161" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="射程"/>
+    <text id="n5" name="element_title" xy="179,18" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="属性"/>
+    <text id="n6" name="hurt_type_title" xy="178,65" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="伤害"/>
+    <text id="n7" name="skill_type_title" xy="178,116" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="类型"/>
+    <text id="n8" name="use_fonce_title" xy="178,162" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#bdbdb3" align="center" vAlign="middle" autoSize="none" text="限制"/>
+    <text id="n9" name="basic_hurt_value" xy="92,17" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="40">
+      <relation target="n0" sidePair="left-right"/>
+    </text>
+    <text id="n10" name="num_value" xy="91,64" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="40"/>
+    <text id="n11" name="live_time_value" xy="92,114" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="6s"/>
+    <text id="n12" name="distance_max_value" xy="98,161" size="65,32" font="迷你简铁筋隶书" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="3"/>
+    <text id="n13" name="element_value" xy="240,18" size="185,32" font="迷你简铁筋隶书" fontSize="25" color="#fa822c" align="center" vAlign="middle" autoSize="none" text="火"/>
+    <text id="n14" name="hurt_type_value" xy="240,65" size="185,32" font="迷你简铁筋隶书" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="物理"/>
+    <text id="n15" name="skill_type_value" xy="240,116" size="185,32" font="迷你简铁筋隶书" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="攻击系功能无法胜多负少分"/>
+    <text id="n16" name="use_fonce_value" xy="240,161" size="185,32" font="迷你简铁筋隶书" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="PVP使用"/>
+  </displayList>
+</component>package.xml|1380|<packageDescription id="7duwokd2" name="SSD_MAGIC_SELECT_PACKAGE">
+  <resources>
+    <component id="i6vg11" name="skill_icon" exported="true" size="174,186"/>
+    <component id="i6vg13" name="skill_stars_com" size="129,45"/>
+    <component id="i6vg18" name="skill_quality_com" size="158,158"/>
+    <component id="i6vg1b" name="btn_skill_bottom" exported="true" size="320,80"/>
+    <component id="i6vg1c" name="skill_slot_com" exported="true" size="96,589"/>
+    <component id="i6vg1d" name="skill_list_bar" exported="true" size="730,90"/>
+    <component id="i6vg1e" name="btn_pre_page" size="114,100"/>
+    <component id="i6vg1f" name="btn_next_page" size="114,100"/>
+    <component id="i6vgx" name="skill_item_card" exported="true" size="493,837"/>
+    <component id="i6vgy" name="card_skill_name" exported="true" size="425,71"/>
+    <component id="i6vgz" name="card_skill_property" exported="true" size="458,225"/>
+    <component id="v9521v" name="UI_MAGIC_SELECT" exported="true" size="1920,1080"/>
+    <component id="v95222" name="Card" exported="true" size="493,837"/>
+    <component id="v95223" name="skill_slot_1" size="178,711"/>
+    <component id="v95224" name="skill_slot_2" size="178,711"/>
+    <sound id="kr5025" name="btn1" file="kr5025.wav" exported="true"/>
+    <sound id="kr5026" name="page" file="kr5026.wav" exported="true"/>
+  </resources>
+</packageDescription>v9521v.xml|10637|<component size="1920,1080">
+  <displayList>
+    <image id="n11" name="bg_img" src="tr1m0" pkg="711fpsps" xy="0,0"/>
+    <component id="n46" name="skill_property_card" src="v95222" xy="59,127" pivot="0.5,0.5"/>
+    <component id="n47" name="skill_slot_1" src="v95223" xy="620,215" pivot="0.5,0.5"/>
+    <component id="n48" name="skill_slot_2" src="v95224" xy="859,215" pivot="0.5,0.5"/>
+    <text id="n16" name="slot_des" xy="607,168" size="425,37" font="迷你简铁筋隶书" fontSize="29" color="#282828" align="center" vAlign="middle" autoSize="none" text="从右侧选择圣物拖拽至技能位"/>
+    <component id="n25" name="btn_test_magic" src="i6vg1b" xy="138,975" pivot="0.5,0.5">
+      <Button title="测试魔法"/>
+    </component>
+    <component id="n26" name="btn_self_choose_comp" src="i6vg1b" xy="678,975" pivot="0.5,0.5">
+      <Button title="自选组合" sound="ui://7duwokd2kr5025" volume="100"/>
+    </component>
+    <component id="n27" name="btn_strength" src="i6vg1b" xy="1345,975" pivot="0.5,0.5">
+      <Button title="强  化"/>
+    </component>
+    <component id="n28" name="skill_list_bar" src="i6vg1d" xy="1140,147" pivot="0.5,0.5"/>
+    <text id="n30" name="skill_bar_des" xy="1292,118" size="425,37" font="迷你简铁筋隶书" fontSize="29" color="#282828" align="center" vAlign="middle" autoSize="none" text="左右察看圣物分类"/>
+    <image id="n36" name="dir_bottom" src="tr1m14" pkg="7g9sac5d" xy="1481,958" rotation="-90"/>
+    <list id="n37" name="all_skills_list" xy="1140,271" pivot="0.5,0.5" size="730,623" layout="flow_hz" overflow="scroll" scrollBarFlags="128" scrollBar="auto" margin="0,0,0,0" clipSoftness="0,200" colGap="10" defaultItem="ui://7duwokd2i6vg11"/>
+    <text id="n31" name="now_page_number" xy="1441,233" size="55,39" font="迷你简铁筋隶书" fontSize="32" color="#282828" align="center" vAlign="middle" autoSize="none" text="1"/>
+    <text id="n32" name="all_page_number" xy="1513,233" size="55,39" font="迷你简铁筋隶书" fontSize="32" color="#282828" align="center" vAlign="middle" autoSize="none" text=""/>
+    <text id="n33" name="part_line" xy="1476,233" size="55,39" font="迷你简铁筋隶书" fontSize="32" color="#282828" align="center" vAlign="middle" autoSize="none" text="/"/>
+    <component id="n39" name="page_title_bar" src="cnk3q" pkg="0399839e" xy="0,0">
+      <Label title="魔法圣物"/>
+    </component>
+    <graph id="n49" name="holder" xy="643,366" size="129,120" type="rect" fillColor="#ff66cc99"/>
+  </displayList>
+  <transition name="view_enter_anim">
+    <item time="0" type="Alpha" target="n21" value="0"/>
+    <item time="0" type="Alpha" target="n41" value="0"/>
+    <item time="0" type="Alpha" target="n3" value="0"/>
+    <item time="0" type="Alpha" target="n25" value="0"/>
+    <item time="0" type="Alpha" target="n11" tween="true" startValue="1" endValue="1" duration="6" ease="Linear"/>
+    <item time="0" type="Alpha" target="n20" value="0"/>
+    <item time="0" type="Alpha" target="n26" value="0"/>
+    <item time="0" type="Alpha" target="n18" value="0"/>
+    <item time="0" type="Alpha" target="n14" value="0"/>
+    <item time="0" type="Alpha" target="n23" value="0"/>
+    <item time="0" type="Alpha" target="n12" value="0"/>
+    <item time="0" type="Alpha" target="n33" value="0"/>
+    <item time="0" type="Alpha" target="n30" value="0"/>
+    <item time="0" type="Alpha" target="n31" value="0"/>
+    <item time="0" type="Alpha" target="n16" value="0"/>
+    <item time="0" type="Alpha" target="n37" value="0"/>
+    <item time="0" type="Alpha" target="n22" value="0"/>
+    <item time="0" type="Alpha" target="n28" value="0"/>
+    <item time="0" type="Alpha" target="n27" value="0"/>
+    <item time="0" type="Alpha" target="n36" value="0"/>
+    <item time="0" type="Alpha" target="n19" value="0"/>
+    <item time="0" type="Alpha" target="n32" value="0"/>
+    <item time="0" type="Alpha" target="n46" value="0"/>
+    <item time="0" type="Alpha" target="n47" value="0"/>
+    <item time="0" type="Alpha" target="n48" value="0"/>
+    <item time="0" type="Scale" target="n48" value="1,1"/>
+    <item time="0" type="Scale" target="n4" value="1,1"/>
+    <item time="0" type="Scale" target="n47" value="1,1"/>
+    <item time="0" type="Scale" target="n43" value="1,1"/>
+    <item time="0" type="Scale" target="n45" value="1,1"/>
+    <item time="0" type="Scale" target="n44" value="1,1"/>
+    <item time="0" type="Scale" target="n46" value="1,1"/>
+    <item time="0" type="Scale" target="n37" value="1,1"/>
+    <item time="0" type="Scale" target="n27" value="1,1"/>
+    <item time="0" type="Scale" target="n42" value="1,1"/>
+    <item time="0" type="Scale" target="n5" value="1,1"/>
+    <item time="0" type="Scale" target="n10" value="1,1"/>
+    <item time="6" type="Alpha" target="n41" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="6" type="Alpha" target="n25" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="6" type="Alpha" target="n46" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="6" type="Alpha" target="n3" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="6" type="Scale" target="n3" tween="true" startValue="1,1" endValue="1.05,1.05" duration="16"/>
+    <item time="6" type="Scale" target="n25" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="6" type="Scale" target="n4" tween="true" startValue="1,1" endValue="1.05,1.05" duration="16"/>
+    <item time="6" type="Scale" target="n42" tween="true" startValue="1,1" endValue="1.05,1.05" duration="16"/>
+    <item time="6" type="Scale" target="n5" tween="true" startValue="1,1" endValue="1.05,1.05" duration="16"/>
+    <item time="6" type="Scale" target="n43" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="6" type="Scale" target="n46" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="6" type="Scale" target="n10" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="9" type="Alpha" target="n16" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n48" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n47" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n18" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n22" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n19" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n26" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n23" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n21" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n12" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n14" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Alpha" target="n20" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="9" type="Scale" target="n48" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="9" type="Scale" target="n47" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="9" type="Scale" target="n44" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="9" type="Scale" target="n45" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="9" type="Scale" target="n26" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="10" type="Scale" target="n43" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="10" type="Scale" target="n25" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="10" type="Scale" target="n46" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="10" type="Scale" target="n10" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="12" type="Alpha" target="n30" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Alpha" target="n33" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Alpha" target="n28" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Alpha" target="n31" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Alpha" target="n27" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Alpha" target="n36" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Alpha" target="n37" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Alpha" target="n32" tween="true" startValue="0" endValue="1" duration="7"/>
+    <item time="12" type="Scale" target="n28" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="12" type="Scale" target="n37" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="12" type="Scale" target="n27" tween="true" startValue="1,1" endValue="1.05,1.05" duration="4"/>
+    <item time="13" type="Scale" target="n26" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="13" type="Scale" target="n47" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="13" type="Scale" target="n48" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="13" type="Scale" target="n44" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="13" type="Scale" target="n45" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="16" type="Scale" target="n28" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="16" type="Scale" target="n27" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="16" type="Scale" target="n37" tween="true" startValue="1.05,1.05" endValue="1,1" duration="4"/>
+    <item time="22" type="Scale" target="n4" tween="true" startValue="1.05,1.05" endValue="1,1" duration="15"/>
+    <item time="22" type="Scale" target="n5" tween="true" startValue="1.05,1.05" endValue="1,1" duration="15"/>
+    <item time="22" type="Scale" target="n3" tween="true" startValue="1.05,1.05" endValue="1,1" duration="15"/>
+    <item time="22" type="Scale" target="n42" tween="true" startValue="1.05,1.05" endValue="1,1" duration="15"/>
+  </transition>
+</component>v95222.xml|1137|<component size="493,837">
+  <controller name="property_view" pages="0,show,1,hide" selected="0"/>
+  <displayList>
+    <component id="n3" name="skill_item_card" src="i6vgx" xy="0,0" pivot="0.5,0.5"/>
+    <component id="n4" name="card_skill_property" src="i6vgz" xy="20,589" pivot="0.5,-1" group="n41"/>
+    <text id="n2" name="card_skill_des" xy="36,483" size="418,107" group="n41" font="迷你简铁筋隶书" fontSize="29" color="#282828" align="center" autoSize="none" text="全身围绕寒冰于空中突击攻击&#xA;若攻击成功，可连续攻击"/>
+    <component id="n10" name="card_skill_icon" src="i6vg11" xy="98,87" pivot="0.5,0.5" size="295,315" group="n41">
+      <Button title=" "/>
+    </component>
+    <loader id="n42" name="card_element" xy="209,17" pivot="0.5,0.5" size="71,66" group="n41" url="ui://7g9sac5dtr1m1v" align="center" vAlign="middle"/>
+    <component id="n5" name="card_skill_name" src="i6vgy" xy="37,408" pivot="0.5,1" group="n41">
+      <Label title="烈焰之护身符"/>
+    </component>
+    <group id="n41" name="skill_property" xy="20,17" size="458,797" advanced="true">
+      <gearDisplay controller="property_view" pages="0"/>
+    </group>
+  </displayList>
+</component>v95223.xml|647|<component size="178,711">
+  <displayList>
+    <component id="n12" name="n12" src="i6vg1c" xy="40,0" pivot="0.5,0.5">
+      <Label icon="ui://7g9sac5dtr1m6"/>
+    </component>
+    <component id="n18" name="first_skill_slot" src="i6vg11" xy="0,109" pivot="0.5,0.5" size="178,190">
+      <Button title=" "/>
+    </component>
+    <component id="n19" name="second_skill_slot" src="i6vg11" xy="0,313" pivot="0.5,0.5" size="178,190">
+      <Button title=" "/>
+    </component>
+    <component id="n20" name="third_skill_slot" src="i6vg11" xy="0,521" pivot="0.5,0.5" size="178,190">
+      <Button title=" "/>
+    </component>
+  </displayList>
+</component>v95224.xml|646|<component size="178,711">
+  <displayList>
+    <component id="n14" name="n14" src="i6vg1c" xy="39,0" pivot="0.5,0.5">
+      <Label icon="ui://7g9sac5dtr1m5"/>
+    </component>
+    <component id="n21" name="forth_skill_slot" src="i6vg11" xy="0,109" pivot="0.5,0.5" size="178,190">
+      <Button title=" "/>
+    </component>
+    <component id="n22" name="fifth_skill_slot" src="i6vg11" xy="0,313" pivot="0.5,0.5" size="178,190">
+      <Button title=" "/>
+    </component>
+    <component id="n23" name="sixth_skill_slot" src="i6vg11" xy="0,521" pivot="0.5,0.5" size="178,190">
+      <Button title=" "/>
+    </component>
+  </displayList>
+</component>

@@ -37,6 +37,7 @@ namespace FairyGUI
 		string _alternativeText;
 		bool _alternatvieHtml;
 		float _fontSizeScale;
+		float _renderScale;
 
 		RichTextField _richTextField;
 
@@ -63,6 +64,7 @@ namespace FairyGUI
 			_textFormat.lineSpacing = 3;
 			_strokeColor = new Color(0, 0, 0, 1);
 			_fontSizeScale = 1;
+			_renderScale = UIContentScaler.scaleFactor;
 
 			_wordWrap = true;
 			_text = string.Empty;
@@ -457,6 +459,9 @@ namespace FairyGUI
 		{
 			if (_font != null)
 			{
+				if (_font.keepCrisp && _renderScale != UIContentScaler.scaleFactor)
+					_textChanged = true;
+
 				if (_font.mainTexture != graphics.texture)
 				{
 					if (!_textChanged)
@@ -497,6 +502,7 @@ namespace FairyGUI
 		{
 			_textChanged = false;
 			_requireUpdateMesh = true;
+			_renderScale = UIContentScaler.scaleFactor;
 
 			Cleanup();
 
@@ -564,7 +570,7 @@ namespace FairyGUI
 			int lineSpacing = _textFormat.lineSpacing - 1;
 			float rectWidth = _contentRect.width - GUTTER_X * 2;
 			float lineWidth = 0, lineHeight = 0, lineTextHeight = 0;
-			int glyphWidth = 0, glyphHeight = 0;
+			float glyphWidth = 0, glyphHeight = 0;
 			int wordChars = 0;
 			float wordStart = 0;
 			bool wordPossible = false;
@@ -738,7 +744,7 @@ namespace FairyGUI
 					IHtmlObject htmlObject = null;
 					if (_richTextField != null)
 					{
-						element.space = (int)(rectWidth - lineWidth);
+						element.space = (int)(rectWidth - lineWidth - 4);
 						htmlObject = _richTextField.htmlPageContext.CreateObject(_richTextField, element);
 						element.htmlObject = htmlObject;
 					}
@@ -1082,7 +1088,10 @@ namespace FairyGUI
 								}
 								element.position = new Vector2(charX + 1, line.y + (int)((line.height - htmlObj.height) / 2));
 								htmlObj.SetPosition(element.position.x, element.position.y);
-								element.hidden = lineClipped || clipped && charX + htmlObj.width > _contentRect.width - GUTTER_X;
+								if (lineClipped || clipped && charX + htmlObj.width > _contentRect.width - GUTTER_X)
+									element.status |= 1;
+								else
+									element.status &= 254;
 								charX += htmlObj.width + letterSpacing + 2;
 							}
 						}

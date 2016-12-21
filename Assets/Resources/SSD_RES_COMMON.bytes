@@ -1,0 +1,104 @@
+package.xml|8874|<packageDescription id="7g9sac5d" name="SSD_RES_COMMON">
+  <resources>
+    <atlas id="atlas0" size="2048,2048" file="atlas0.png"/>
+    <image id="jrwr38" name="SSII_UI_Icon_Skill_4513" size="250,250" exported="true"/>
+    <image id="jrwr39" name="SSII_UI_Icon_Skill_4301" size="250,250" exported="true"/>
+    <image id="jrwr3a" name="SSII_UI_Icon_Skill_4105" size="250,250" exported="true"/>
+    <image id="jrwr3b" name="SSII_UI_Icon_Skill_3605" size="250,250" exported="true"/>
+    <image id="jrwr3c" name="SSII_UI_Icon_Skill_3507" size="250,250" exported="true"/>
+    <image id="jrwr3d" name="SSII_UI_Icon_Skill_3401" size="250,250" exported="true"/>
+    <image id="jrwr3e" name="SSII_UI_Icon_Skill_3313" size="250,250" exported="true"/>
+    <image id="jrwr3f" name="SSII_UI_Icon_Skill_3309" size="250,250" exported="true"/>
+    <image id="jrwr3g" name="SSII_UI_Icon_Skill_3305" size="250,250" exported="true"/>
+    <image id="jrwr3h" name="SSII_UI_Icon_Skill_3301" size="250,250" exported="true"/>
+    <image id="jrwr3i" name="SSII_UI_Icon_Skill_3005" size="250,250" exported="true"/>
+    <image id="jrwr3j" name="SSII_UI_Icon_Skill_2913" size="250,250" exported="true"/>
+    <image id="jrwr3k" name="SSII_UI_Icon_Skill_2705" size="250,250" exported="true"/>
+    <image id="jrwr3l" name="SSII_UI_Icon_Skill_2521" size="250,250" exported="true"/>
+    <image id="jrwr3m" name="SSII_UI_Icon_Skill_2505" size="250,250" exported="true"/>
+    <image id="jrwr3n" name="SSII_UI_Icon_Skill_2045" size="250,250" exported="true"/>
+    <image id="jrwr3o" name="SSII_UI_Icon_Skill_2021" size="250,250" exported="true"/>
+    <image id="jrwr3p" name="SSII_UI_Icon_Skill_2005" size="250,250" exported="true"/>
+    <image id="jrwr3q" name="SSII_UI_Icon_Skill_1917" size="250,250" exported="true"/>
+    <image id="jrwr3r" name="SSII_UI_Icon_Skill_1301" size="250,250" exported="true"/>
+    <image id="jrwr3s" name="SSII_UI_Icon_Skill_1005" size="250,250" exported="true"/>
+    <image id="jrwr3t" name="SSII_UI_Icon_Equ" size="37,36" exported="true"/>
+    <image id="l03w2h" name="SSII_UI_Icon_Infor_Huifu" size="75,75" exported="true"/>
+    <image id="l03w2i" name="SSII_UI_Icon_Infor_Gongji" size="75,75" exported="true"/>
+    <image id="l03w2j" name="SSII_UI_Icon_Infor_Fangyu" size="75,75" exported="true"/>
+    <image id="l03w2k" name="SSII_UI_Icon_Infor_Tili" size="75,75" exported="true"/>
+    <image id="l03w2m" name="SSII_UI_Icon_Skill_1949" size="250,250" exported="true"/>
+    <image id="lzht2f" name="SSII_UI_Text_BG_Black" size="65,65" exported="true" scale="9grid" scale9grid="17,17,34,34"/>
+    <image id="tr1m10" name="SSII_UI_Button_Skill_Change" size="110,110" exported="true"/>
+    <image id="tr1m11" name="SSII_UI_Button_Skill_BG" size="200,200" exported="true"/>
+    <image id="tr1m12" name="SSII_UI_Button_Roll_Down" size="200,200" exported="true"/>
+    <image id="tr1m13" name="SSII_UI_Button_Roll" size="200,200" exported="true"/>
+    <image id="tr1m14" name="SSII_UI_Button_Next_S" size="47,73" exported="true"/>
+    <image id="tr1m15" name="SSII_UI_Button_Next_L" size="114,100" exported="true"/>
+    <image id="tr1m16" name="SSII_UI_Button_Help" size="104,104" exported="true"/>
+    <image id="tr1m17" name="SSII_UI_Button_Control_BG" size="200,200" exported="true"/>
+    <image id="tr1m18" name="SSII_UI_Button_Control_Arrow" size="212,114" exported="true"/>
+    <image id="tr1m19" name="SSII_UI_Button_Control" size="171,171" exported="true"/>
+    <image id="tr1m1a" name="SSII_UI_Button_Back" size="197,111" exported="true"/>
+    <image id="tr1m1b" name="SSII_UI_Button_Add" size="80,82" exported="true"/>
+    <image id="tr1m1i" name="SSII_UI_Icon_UMagic_Sample" size="125,125" exported="true"/>
+    <image id="tr1m1j" name="SSII_UI_Icon_Star" size="53,52" exported="true"/>
+    <image id="tr1m1k" name="SSII_UI_Icon_None" size="71,66" exported="true"/>
+    <image id="tr1m1l" name="SSII_UI_Icon_Metal" size="71,66" exported="true"/>
+    <image id="tr1m1m" name="SSII_UI_Icon_Main_Versus" size="228,228" exported="true"/>
+    <image id="tr1m1n" name="SSII_UI_Icon_Main_UMagic" size="228,228" exported="true"/>
+    <image id="tr1m1o" name="SSII_UI_Icon_Main_Setting" size="228,228" exported="true"/>
+    <image id="tr1m1p" name="SSII_UI_Icon_Main_Mail" size="228,228" exported="true"/>
+    <image id="tr1m1q" name="SSII_UI_Icon_Main_Magic" size="228,228" exported="true"/>
+    <image id="tr1m1r" name="SSII_UI_Icon_Main_Inventory" size="228,228" exported="true"/>
+    <image id="tr1m1s" name="SSII_UI_Icon_Main_Follow" size="228,228" exported="true"/>
+    <image id="tr1m1t" name="SSII_UI_Icon_Main_Empire" size="228,228" exported="true"/>
+    <image id="tr1m1u" name="SSII_UI_Icon_Ice" size="71,66" exported="true"/>
+    <image id="tr1m1v" name="SSII_UI_Icon_Fire" size="71,66" exported="true"/>
+    <image id="tr1m1w" name="SSII_UI_Icon_Du" size="71,66" exported="true"/>
+    <image id="tr1m1x" name="SSII_UI_Icon_Diamond" size="100,100" exported="true"/>
+    <image id="tr1m1y" name="SSII_UI_Icon_Debuff_Xuanyun" size="75,75" exported="true"/>
+    <image id="tr1m1z" name="SSII_UI_Icon_Debuff_Ranshao" size="75,75" exported="true"/>
+    <image id="tr1m20" name="SSII_UI_Icon_Debuff_Mabi" size="75,75" exported="true"/>
+    <image id="tr1m21" name="SSII_UI_Icon_Debuff_Jiansu" size="75,75" exported="true"/>
+    <image id="tr1m22" name="SSII_UI_Icon_Debuff_Bingdong" size="75,75" exported="true"/>
+    <image id="tr1m23" name="SSII_UI_Icon_Coin" size="100,100" exported="true"/>
+    <image id="tr1m24" name="SSII_UI_Icon_Buff_Jiasu" size="75,75" exported="true"/>
+    <image id="tr1m25" name="SSII_UI_Icon_Buff_Gongji" size="75,75" exported="true"/>
+    <image id="tr1m26" name="SSII_UI_Icon_Buff_Fangyu" size="75,75" exported="true"/>
+    <image id="tr1m27" name="SSII_UI_Icon_Bolt" size="71,66" exported="true"/>
+    <image id="tr1m3" name="SSII_UI_Title_BG_Ink" size="705,77" exported="true"/>
+    <image id="tr1m4" name="SSII_UI_Text_BG_Ink" size="238,56" exported="true"/>
+    <image id="tr1m5" name="SSII_UI_Skill_Word_II" size="42,41" exported="true"/>
+    <image id="tr1m6" name="SSII_UI_Skill_Word_I" size="20,41" exported="true"/>
+    <image id="tr1m7" name="SSII_UI_Skill_Selected" size="185,185" exported="true"/>
+    <image id="tr1m8" name="SSII_UI_Skill_Quality_Yellow" size="158,158" exported="true"/>
+    <image id="tr1m9" name="SSII_UI_Skill_Quality_White" size="158,158" exported="true"/>
+    <image id="tr1ma" name="SSII_UI_Skill_Quality_Orange" size="158,158" exported="true"/>
+    <image id="tr1mb" name="SSII_UI_Skill_Quality_Black" size="158,158" exported="true"/>
+    <image id="tr1mc" name="SSII_UI_Skill_Group_BG" size="96,589" exported="true"/>
+    <image id="tr1md" name="SSII_UI_Skill_BG_Ink" size="170,170" exported="true"/>
+    <image id="tr1me" name="SSII_UI_LVinfor_Holy" size="73,175" exported="true"/>
+    <image id="tr1mf" name="SSII_UI_LVinfor_Evil" size="73,175" exported="true"/>
+    <image id="tr1mg" name="SSII_UI_LVinfor_BG" size="386,314" exported="true"/>
+    <image id="tr1mh" name="SSII_UI_Line_Slipt" size="694,13" exported="true"/>
+    <image id="tr1mi" name="SSII_UI_Line_Debuff" size="10,10" exported="true"/>
+    <image id="tr1mj" name="SSII_UI_Line_CHHP_BG" size="30,30" exported="true" scale="9grid" scale9grid="9,10,12,10"/>
+    <image id="tr1mk" name="SSII_UI_Line_CHHP" size="38,33" exported="true" scale="9grid" scale9grid="13,13,12,7"/>
+    <image id="tr1ml" name="SSII_UI_Line_Buff" size="10,10" exported="true" scale="9grid" scale9grid="4,4,2,2"/>
+    <image id="tr1mm" name="SSII_UI_Line_BossHP_BG" size="30,30" exported="true" scale="9grid" scale9grid="8,8,14,14"/>
+    <image id="tr1mn" name="SSII_UI_Line_BossHP" size="38,33" exported="true" scale="9grid" scale9grid="13,13,12,7"/>
+    <image id="tr1mo" name="SSII_UI_ItemCard_BG" size="493,837" exported="true"/>
+    <image id="tr1mp" name="SSII_UI_Grow_Flash_White" size="155,60" exported="true"/>
+    <image id="tr1mq" name="SSII_UI_Grow_Flash_Red" size="84,46" exported="true"/>
+    <image id="tr1mr" name="SSII_UI_Grow_Flash_Blue" size="84,46" exported="true"/>
+    <image id="tr1ms" name="SSII_UI_Fight_CHinfor_BG" size="687,148" exported="true"/>
+    <image id="tr1mt" name="SSII_UI_Button_UMagic_HL" size="125,125" exported="true"/>
+    <image id="tr1mu" name="SSII_UI_Button_UMagic_BG" size="125,125" exported="true"/>
+    <image id="tr1mv" name="SSII_UI_Button_Text_S" size="216,91" exported="true"/>
+    <image id="tr1mw" name="SSII_UI_Button_Text_L" size="335,98" exported="true" scale="9grid" scale9grid="86,36,166,26"/>
+    <image id="tr1mx" name="SSII_UI_Button_Target_Down" size="110,110" exported="true"/>
+    <image id="tr1my" name="SSII_UI_Button_Target_Change" size="110,110" exported="true"/>
+    <image id="tr1mz" name="SSII_UI_Button_Skill_Change_Down" size="110,110" exported="true"/>
+  </resources>
+</packageDescription>

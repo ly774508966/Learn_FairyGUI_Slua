@@ -1,0 +1,50 @@
+fhv3a.xml|302|<component size="1920,1080" pivot="0.5,1" anchor="true">
+  <displayList>
+    <richtext id="n0" name="name" xy="870,526" size="180,28" fontSize="24" color="#ff6633" ubb="true" strokeColor="#000000" text="Long [color=#FFFFFF]Long[/color][img]ui://21gc3jcpoi6k3[/img] Name"/>
+  </displayList>
+</component>oi6k3.xml|166|<movieclip interval="41" frameCount="2">
+  <frames>
+    <frame rect="0,0,24,24" addDelay="166"/>
+    <frame rect="0,0,24,24" addDelay="166"/>
+  </frames>
+</movieclip>oi6k4.xml|289|<movieclip interval="125" frameCount="7">
+  <frames>
+    <frame rect="0,0,73,68"/>
+    <frame rect="4,2,65,67"/>
+    <frame rect="8,8,57,61"/>
+    <frame rect="10,15,53,55"/>
+    <frame rect="8,8,57,61"/>
+    <frame rect="4,2,65,67"/>
+    <frame rect="0,0,73,68"/>
+  </frames>
+</movieclip>oi6k8.xml|589|<component size="145,106">
+  <displayList>
+    <component id="n0" name="blood" src="oi6k9" xy="0,86" touchable="false">
+      <ProgressBar value="50" max="100"/>
+    </component>
+    <loader id="n1" name="sign" xy="47,-1" size="50,50" url="ui://21gc3jcpoi6k5" align="center" vAlign="bottom"/>
+    <richtext id="n3" name="name" xy="-17,61" size="180,28" fontSize="24" color="#ff9966" ubb="true" strokeColor="#000000" text="Long [color=#FFFFFF]Long[/color][img]ui://21gc3jcpoi6k3[/img] Name">
+      <relation target="" sidePair="center-center"/>
+    </richtext>
+  </displayList>
+</component>oi6k9.xml|309|<component size="145,20" extention="ProgressBar">
+  <displayList>
+    <image id="n1" name="n1" src="oi6k1" xy="0,0" size="145,20">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2" name="bar" src="oi6k2" xy="11,5"/>
+  </displayList>
+  <ProgressBar/>
+</component>package.xml|680|<packageDescription id="21gc3jcp" name="HeaderBar">
+  <resources>
+    <atlas id="atlas0" size="256,256" file="atlas0.png"/>
+    <component id="fhv3a" name="HeaderBarWin" exported="true" size="1920,1080"/>
+    <component id="oi6k8" name="HeaderBar" exported="true" size="145,106"/>
+    <component id="oi6k9" name="bloodbar" size="145,20"/>
+    <image id="oi6k1" name="0" size="145,20"/>
+    <image id="oi6k2" name="1" size="122,9" scale="9grid" scale9grid="7,2,108,3"/>
+    <image id="oi6k5" name="task" size="47,44" exported="true"/>
+    <movieclip id="oi6k3" name="cool" size="24,24"/>
+    <movieclip id="oi6k4" name="fighting" size="73,70"/>
+  </resources>
+</packageDescription>

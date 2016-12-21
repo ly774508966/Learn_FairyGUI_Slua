@@ -13,7 +13,7 @@ jcqd5.xml|923|<component size="1136,640">
     <text id="n4" name="txt" xy="705,411" size="252,28" fontSize="24" color="#ffffff" autoSize="none" strokeColor="#000000" text=""/>
     <graph id="n5" name="holder" xy="813,514" size="66,67"/>
   </displayList>
-</component>jcqd6.xml|1083|<component size="720,88" overflow="scroll" scroll="horizontal" extention="Button">
+</component>jcqd6.xml|1278|<component size="720,88" overflow="scroll" scroll="horizontal" extention="Button">
   <displayList>
     <loader id="n0" name="icon" xy="7,8" size="64,64" url="ui://olan5v3ojcqd4" align="center" vAlign="middle" fill="scaleFree"/>
     <image id="n1" name="n1" src="jcqd3" xy="0,86" size="1000,2">
@@ -32,6 +32,10 @@ jcqd5.xml|923|<component size="1136,640">
     </text>
   </displayList>
   <Button/>
+  <transition name="t0">
+    <item time="0" type="XY" tween="true" startValue="713,0" endValue="0,0" duration="48"/>
+    <item time="48" type="XY" tween="true" startValue="0,0"/>
+  </transition>
 </component>jcqd7.xml|334|<component size="140,85" extention="Button">
   <displayList>
     <graph id="n1" name="n1" xy="0,0" size="140,87" type="rect" lineSize="0" fillColor="#ff666666"/>

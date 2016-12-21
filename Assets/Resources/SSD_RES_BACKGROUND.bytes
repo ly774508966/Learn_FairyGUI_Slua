@@ -1,0 +1,8 @@
+package.xml|416|<packageDescription id="711fpsps" name="SSD_RES_BACKGROUND">
+  <resources>
+    <atlas id="atlas_tr1m0" size="2048,2048" file="atlas_tr1m0.png"/>
+    <atlas id="atlas_tr1m1" size="2048,2048" file="atlas_tr1m1.png"/>
+    <image id="tr1m0" name="SSII_UI_BG_Magic" size="1920,1080" exported="true"/>
+    <image id="tr1m1" name="SSII_UI_BG_CH_Infor" size="1920,1080" exported="true"/>
+  </resources>
+</packageDescription>

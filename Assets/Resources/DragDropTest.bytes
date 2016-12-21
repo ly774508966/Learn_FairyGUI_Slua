@@ -1,0 +1,44 @@
+ku4j0.xml|255|<component size="100,30" extention="Button">
+  <displayList>
+    <loader id="n0" name="icon" xy="-1,0" size="101,32" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>ku4j3.xml|474|<component size="1920,1080">
+  <displayList>
+    <component id="n8" name="photo_01" src="ku4j4" xy="910,490">
+      <Button icon="ui://s5a7s4ocgash9"/>
+    </component>
+    <component id="n9" name="photo_02" src="ku4j4" xy="1204,504"/>
+    <component id="n10" name="flower_01" src="ku4j0" xy="857,475" size="115,30">
+      <Button icon="ui://s5a7s4ocgasha"/>
+    </component>
+    <component id="n11" name="flower_02" src="ku4j0" xy="1270,493"/>
+  </displayList>
+</component>ku4j4.xml|512|<component size="100,100" extention="Button">
+  <displayList>
+    <image id="n1" name="n1" src="gash7" xy="5,4">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2" name="n2" src="gash8" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n3" name="icon" xy="1,1" size="98,98" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+  </displayList>
+  <Button/>
+</component>package.xml|679|<packageDescription id="s5a7s4oc" name="DragDropTest">
+  <resources>
+    <atlas id="atlas0" size="512,256" file="atlas0.png"/>
+    <component id="ku4j0" name="huawen" size="100,30"/>
+    <component id="ku4j3" name="DragDropTestWindow" exported="true" size="1920,1080"/>
+    <component id="ku4j4" name="touxiang" size="100,100"/>
+    <image id="gash6" name="huawen1.png" size="85,59" exported="true"/>
+    <image id="gash7" name="k0" size="90,91" exported="true"/>
+    <image id="gash8" name="k2" size="100,100" exported="true"/>
+    <image id="gash9" name="r3" size="90,90" exported="true"/>
+    <image id="gasha" name="gsia2" size="261,63"/>
+  </resources>
+</packageDescription>

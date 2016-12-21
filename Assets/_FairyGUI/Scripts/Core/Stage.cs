@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using FairyGUI.Utils;
 using System.Text;
+using FairyGUI.Utils;
 
 #if UNITY_5_3_OR_NEWER
 using UnityEngine.SceneManagement;
@@ -141,21 +141,16 @@ namespace FairyGUI
 
 			StageEngine engine = GameObject.FindObjectOfType<StageEngine>();
 			if (engine != null)
-				this.gameObject = engine.gameObject;
-			else
-			{
-				int layer = LayerMask.NameToLayer(StageCamera.LayerName);
+				Object.Destroy(engine.gameObject);
 
-				this.gameObject = new GameObject("Stage");
-				this.gameObject.hideFlags = HideFlags.None;
-				this.gameObject.layer = layer;
-				this.gameObject.AddComponent<StageEngine>();
-				this.gameObject.AddComponent<UIContentScaler>();
-			}
-			this.cachedTransform = gameObject.transform;
-			this.cachedTransform.localScale = new Vector3(StageCamera.UnitsPerPixel, StageCamera.UnitsPerPixel, StageCamera.UnitsPerPixel);
+			this.gameObject.name = "Stage";
+			this.gameObject.layer = LayerMask.NameToLayer(StageCamera.LayerName);
+			this.gameObject.AddComponent<StageEngine>();
+			this.gameObject.AddComponent<UIContentScaler>();
 			this.gameObject.SetActive(true);
-			UnityEngine.Object.DontDestroyOnLoad(this.gameObject);
+			Object.DontDestroyOnLoad(this.gameObject);
+
+			this.cachedTransform.localScale = new Vector3(StageCamera.UnitsPerPixel, StageCamera.UnitsPerPixel, StageCamera.UnitsPerPixel);
 
 			EnableSound();
 
@@ -238,7 +233,7 @@ namespace FairyGUI
 
 					oldFocus.onRemovedFromStage.RemoveCapture(_focusRemovedDelegate);
 				}
-				
+
 				if (_focused != null)
 				{
 					if (_focused is InputTextField)
@@ -713,6 +708,20 @@ namespace FairyGUI
 			}
 		}
 
+		DisplayObject clickTest(TouchInfo touch)
+		{
+			if (!touch.clickCancelled
+					&& Mathf.Abs(touch.x - touch.downX) < 50 && Mathf.Abs(touch.y - touch.downY) < 50)
+			{
+				if (touch.downTarget != null && touch.downTarget.stage != null)
+					return touch.downTarget;
+				else
+					return touch.target;
+			}
+			else
+				return null;
+		}
+
 		void HandleCustomInput()
 		{
 			Vector2 pos = _customInputPos;
@@ -739,6 +748,7 @@ namespace FairyGUI
 					touch.clickCancelled = false;
 					touch.downX = touch.x;
 					touch.downY = touch.y;
+					touch.downTarget = touch.target;
 					this.focus = touch.target;
 
 					if (touch.target != null)
@@ -758,7 +768,8 @@ namespace FairyGUI
 					touch.UpdateEvent();
 					touch.CallTouchEnd();
 
-					if (!touch.clickCancelled && Mathf.Abs(touch.x - touch.downX) < 50 && Mathf.Abs(touch.y - touch.downY) < 50)
+					DisplayObject clickTarget = clickTest(touch);
+					if (clickTarget != null)
 					{
 						if (Time.realtimeSinceStartup - touch.lastClickTime < 0.35f)
 						{
@@ -771,7 +782,7 @@ namespace FairyGUI
 							touch.clickCount = 1;
 						touch.lastClickTime = Time.realtimeSinceStartup;
 						touch.UpdateEvent();
-						touch.target.onClick.BubbleCall(touch.evt);
+						clickTarget.onClick.BubbleCall(touch.evt);
 					}
 				}
 			}
@@ -800,6 +811,7 @@ namespace FairyGUI
 					touch.clickCancelled = false;
 					touch.downX = touch.x;
 					touch.downY = touch.y;
+					touch.downTarget = touch.target;
 					touch.button = Input.GetMouseButtonDown(2) ? 2 : (Input.GetMouseButtonDown(1) ? 1 : 0);
 					this.focus = touch.target;
 
@@ -821,26 +833,27 @@ namespace FairyGUI
 					{
 						touch.UpdateEvent();
 						touch.CallTouchEnd();
+					}
 
-						if (!touch.clickCancelled && Mathf.Abs(touch.x - touch.downX) < 50 && Mathf.Abs(touch.y - touch.downY) < 50)
+					DisplayObject clickTarget = clickTest(touch);
+					if (clickTarget != null)
+					{
+						if (Time.realtimeSinceStartup - touch.lastClickTime < 0.35f)
 						{
-							if (Time.realtimeSinceStartup - touch.lastClickTime < 0.35f)
-							{
-								if (touch.clickCount == 2)
-									touch.clickCount = 1;
-								else
-									touch.clickCount++;
-							}
-							else
+							if (touch.clickCount == 2)
 								touch.clickCount = 1;
-							touch.lastClickTime = Time.realtimeSinceStartup;
-							touch.UpdateEvent();
-
-							if (Input.GetMouseButtonUp(1))
-								touch.target.onRightClick.BubbleCall(touch.evt);
 							else
-								touch.target.onClick.BubbleCall(touch.evt);
+								touch.clickCount++;
 						}
+						else
+							touch.clickCount = 1;
+						touch.lastClickTime = Time.realtimeSinceStartup;
+						touch.UpdateEvent();
+
+						if (Input.GetMouseButtonUp(1))
+							clickTarget.onRightClick.BubbleCall(touch.evt);
+						else
+							clickTarget.onClick.BubbleCall(touch.evt);
 					}
 				}
 			}
@@ -890,6 +903,7 @@ namespace FairyGUI
 						touch.clickCancelled = false;
 						touch.downX = touch.x;
 						touch.downY = touch.y;
+						touch.downTarget = touch.target;
 						this.focus = touch.target;
 
 						if (touch.target != null)
@@ -910,13 +924,14 @@ namespace FairyGUI
 						{
 							touch.UpdateEvent();
 							touch.CallTouchEnd();
+						}
 
-							if (!touch.clickCancelled && Mathf.Abs(touch.x - touch.downX) < 50 && Mathf.Abs(touch.y - touch.downY) < 50)
-							{
-								touch.clickCount = uTouch.tapCount;
-								touch.UpdateEvent();
-								touch.target.onClick.BubbleCall(touch.evt);
-							}
+						DisplayObject clickTarget = clickTest(touch);
+						if (clickTarget != null)
+						{
+							touch.clickCount = uTouch.tapCount;
+							touch.UpdateEvent();
+							clickTarget.onClick.BubbleCall(touch.evt);
 						}
 					}
 
@@ -1118,6 +1133,17 @@ namespace FairyGUI
 			if (touch.touchEndMonitors.IndexOf(target) == -1)
 				touch.touchEndMonitors.Add(target);
 		}
+
+		internal Transform CreatePoolManager(string name)
+		{
+			GameObject go = new GameObject("[" + name + "]");
+			go.SetActive(false);
+
+			Transform t = go.transform;
+			ToolSet.SetParent(t, cachedTransform);
+
+			return t;
+		}
 	}
 
 	class TouchInfo
@@ -1137,6 +1163,7 @@ namespace FairyGUI
 		public bool clickCancelled;
 		public float lastClickTime;
 		public DisplayObject target;
+		public DisplayObject downTarget;
 		public DisplayObject lastRollOver;
 		public List<EventDispatcher> touchEndMonitors;
 
@@ -1162,6 +1189,7 @@ namespace FairyGUI
 			lastClickTime = 0;
 			began = false;
 			target = null;
+			downTarget = null;
 			lastRollOver = null;
 			clickCancelled = false;
 			touchEndMonitors.Clear();

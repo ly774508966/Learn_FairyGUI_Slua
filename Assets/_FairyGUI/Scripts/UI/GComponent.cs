@@ -87,7 +87,7 @@ namespace FairyGUI
 			for (int i = numChildren - 1; i >= 0; --i)
 			{
 				GObject obj = _children[i];
-				obj.parent = null; //Avoid GObject.RemoveParent call
+				obj.InternalSetParent(null); //Avoid GObject.RemoveParent call
 				obj.Dispose();
 			}
 		}
@@ -185,7 +185,7 @@ namespace FairyGUI
 				else
 				{
 					child.RemoveFromParent();
-					child.parent = this;
+					child.InternalSetParent(this);
 
 					int cnt = _children.Count;
 					if (child.sortingOrder != 0)
@@ -279,7 +279,7 @@ namespace FairyGUI
 			{
 				GObject child = _children[index];
 
-				child.parent = null;
+				child.InternalSetParent(null);
 
 				if (child.sortingOrder != 0)
 					_sortingChildCount--;
@@ -820,7 +820,7 @@ namespace FairyGUI
 			}
 		}
 
-		internal void ApplyAllControllers()
+		void ApplyAllControllers()
 		{
 			int cnt = _controllers.Count;
 			for (int i = 0; i < cnt; ++i)
@@ -1208,6 +1208,8 @@ namespace FairyGUI
 
 		internal void ConstructFromResource(List<GObject> objectPool, int poolIndex)
 		{
+			this.gameObjectName = packageItem.name;
+
 			XML xml = packageItem.componentData;
 
 			string str;
@@ -1312,25 +1314,20 @@ namespace FairyGUI
 			{
 				DisplayListItem di = displayList[i];
 				if (objectPool != null)
-				{
 					child = objectPool[poolIndex + i];
+				else if (di.packageItem != null)
+				{
+					di.packageItem.Load();
+					child = UIObjectFactory.NewObject(di.packageItem);
+					child.packageItem = di.packageItem;
+					child.ConstructFromResource();
 				}
 				else
-				{
-					if (di.packageItem != null)
-					{
-						di.packageItem.Load();
-						child = UIObjectFactory.NewObject(di.packageItem);
-						child.packageItem = di.packageItem;
-						child.ConstructFromResource();
-					}
-					else
-						child = UIObjectFactory.NewObject(di.type);
-				}
+					child = UIObjectFactory.NewObject(di.type);
 
 				child.underConstruct = true;
 				child.Setup_BeforeAdd(di.desc);
-				child.parent = this;
+				child.InternalSetParent(this);
 				_children.Add(child);
 			}
 
@@ -1344,6 +1341,8 @@ namespace FairyGUI
 				child = _children[i];
 				child.Setup_AfterAdd(displayList[i].desc);
 				child.underConstruct = false;
+				if (child.displayObject != null)
+					ToolSet.SetParent(child.displayObject.cachedTransform, this.displayObject.cachedTransform);
 			}
 
 			str = xml.GetAttribute("mask");

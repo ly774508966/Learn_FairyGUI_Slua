@@ -99,7 +99,6 @@ namespace FairyGUI
 		public GList()
 			: base()
 		{
-			_pool = new GObjectPool();
 			_trackBounds = true;
 			autoResizeItem = true;
 			this.opaque = true;
@@ -107,6 +106,9 @@ namespace FairyGUI
 
 			container = new Container();
 			rootContainer.AddChild(container);
+			rootContainer.gameObject.name = "GList";
+
+			_pool = new GObjectPool(container.cachedTransform);
 
 			onClickItem = new EventListener(this, "onClickItem");
 		}
@@ -945,10 +947,16 @@ namespace FairyGUI
 		{
 			if (_virtual)
 			{
+				if (_numItems == 0)
+					return;
+
 				CheckVirtualList();
 
 				if (index >= _virtualItems.Count)
 					throw new Exception("Invalid child index: " + index + ">" + _virtualItems.Count);
+
+				if (_loop)
+					index = Mathf.FloorToInt(_firstIndex / _numItems) * _numItems + index;
 
 				Rect rect;
 				ItemInfo ii = _virtualItems[index];
@@ -1202,6 +1210,9 @@ namespace FairyGUI
 
 		public void RefreshVirtualList()
 		{
+			if (!_virtual)
+				throw new Exception("FairyGUI: not virtual list");
+
 			SetVirtualListChangedFlag(false);
 		}
 
@@ -1273,7 +1284,11 @@ namespace FairyGUI
 						ch += _virtualItems[i].size.y + _lineGap;
 					if (ch > 0)
 						ch -= _lineGap;
-					cw = this.scrollPane.contentWidth;
+
+					for (int i = 0; i < _curLineItemCount; i++)
+						cw += _virtualItems[i].size.x + _columnGap;
+					if (cw > 0)
+						cw -= _columnGap;
 				}
 				else if (_layout == ListLayoutType.SingleRow || _layout == ListLayoutType.FlowVertical)
 				{
@@ -1282,6 +1297,11 @@ namespace FairyGUI
 					if (cw > 0)
 						cw -= _columnGap;
 					ch = this.scrollPane.contentHeight;
+
+					for (int i = 0; i < _curLineItemCount; i++)
+						ch += _virtualItems[i].size.y + _lineGap;
+					if (ch > 0)
+						ch -= _lineGap;
 				}
 				else
 				{
@@ -1561,7 +1581,7 @@ namespace FairyGUI
 
 					if (ii.obj != null && ii.obj.resourceURL != url)
 					{
-						RemoveChild(ii.obj);
+						RemoveChildToPool(ii.obj);
 						ii.obj = null;
 					}
 				}
@@ -1656,7 +1676,7 @@ namespace FairyGUI
 				ItemInfo ii = _virtualItems[oldFirstIndex + i];
 				if (ii.updateFlag != itemInfoVer && ii.obj != null)
 				{
-					RemoveChild(ii.obj);
+					RemoveChildToPool(ii.obj);
 					ii.obj = null;
 				}
 			}
@@ -1717,7 +1737,7 @@ namespace FairyGUI
 
 					if (ii.obj != null && ii.obj.resourceURL != url)
 					{
-						RemoveChild(ii.obj);
+						RemoveChildToPool(ii.obj);
 						ii.obj = null;
 					}
 				}
@@ -1811,7 +1831,7 @@ namespace FairyGUI
 				ItemInfo ii = _virtualItems[oldFirstIndex + i];
 				if (ii.updateFlag != itemInfoVer && ii.obj != null)
 				{
-					RemoveChild(ii.obj);
+					RemoveChildToPool(ii.obj);
 					ii.obj = null;
 				}
 			}
@@ -1938,7 +1958,7 @@ namespace FairyGUI
 					itemRenderer(i % _numItems, ii.obj);
 
 				ii.obj.SetXY((int)(i / pageSize) * viewWidth + col * (ii.size.x + _columnGap),
-					(i / _curLineItemCount) % _curLineItemCount2 * (ii.size.y + _lineGap));
+					(int)(i / _curLineItemCount) % _curLineItemCount2 * (ii.size.y + _lineGap));
 			}
 
 			//释放未使用的
@@ -1947,7 +1967,7 @@ namespace FairyGUI
 				ItemInfo ii = _virtualItems[i];
 				if (ii.updateFlag != itemInfoVer && ii.obj != null)
 				{
-					RemoveChild(ii.obj);
+					RemoveChildToPool(ii.obj);
 					ii.obj = null;
 				}
 			}
@@ -2069,6 +2089,9 @@ namespace FairyGUI
 
 		override protected void UpdateBounds()
 		{
+			if (_virtual)
+				return;
+
 			int cnt = _children.Count;
 			int i;
 			GObject child;

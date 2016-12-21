@@ -75,6 +75,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DragDropTest.cs" />
+    <Compile Include="Assets\Extension.cs" />
+    <Compile Include="Assets\GestureMain.cs" />
+    <Compile Include="Assets\HeadBarMain.cs" />
     <Compile Include="Assets\MyPlugins\LeanTween\iTween.cs" />
     <Compile Include="Assets\Scripts\AppMain.cs" />
     <Compile Include="Assets\Scripts\Bag\BagMain.cs" />
@@ -753,6 +757,7 @@
     <Compile Include="Assets\Slua\example\VarObj.cs" />
     <Compile Include="Assets\Slua\example\test\TestLua.cs" />
     <Compile Include="Assets\Slua\example\test\test.cs" />
+    <Compile Include="Assets\TestPartical.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\Core\BlendMode.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\Core\CaptureCamera.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\Core\Container.cs" />
@@ -845,6 +850,7 @@
     <Compile Include="Assets\_FairyGUI\Scripts\UI\Gears\IColorGear.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\UI\IUISource.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\UI\Margin.cs" />
+    <Compile Include="Assets\_FairyGUI\Scripts\UI\MyDragDropManager.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\UI\PackageItem.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\UI\PageOption.cs" />
     <Compile Include="Assets\_FairyGUI\Scripts\UI\PopupMenu.cs" />

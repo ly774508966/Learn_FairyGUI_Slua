@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/MyTest.unity
+- path: Assets/Scenes/Test 22 - Gesture.unity
   isLoaded: 1
   isActive: 1
