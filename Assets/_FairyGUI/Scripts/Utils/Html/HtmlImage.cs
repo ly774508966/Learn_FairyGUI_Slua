@@ -7,7 +7,7 @@ namespace FairyGUI.Utils
 	/// <summary>
 	/// 
 	/// </summary>
-	public class HtmlImage : IHtmlObject
+	public class HtmlImage :      IHtmlObject
 	{
 		public GLoader loader { get; private set; }
 

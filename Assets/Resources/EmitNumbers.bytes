@@ -1,0 +1,55 @@
+l4xzp.fnt|595|info creator=UIBuilder
+char id=48 img=l4xz1 xoffset=0 yoffset=0 xadvance=0
+char id=49 img=l4xz3 xoffset=0 yoffset=0 xadvance=0
+char id=50 img=l4xz5 xoffset=0 yoffset=0 xadvance=0
+char id=51 img=l4xz7 xoffset=0 yoffset=0 xadvance=0
+char id=52 img=l4xz9 xoffset=0 yoffset=0 xadvance=0
+char id=53 img=l4xzb xoffset=0 yoffset=0 xadvance=0
+char id=54 img=l4xzd xoffset=0 yoffset=0 xadvance=0
+char id=55 img=l4xzf xoffset=0 yoffset=0 xadvance=0
+char id=56 img=l4xzh xoffset=0 yoffset=0 xadvance=0
+char id=57 img=l4xzj xoffset=0 yoffset=0 xadvance=0
+char id=45 img=l4xzn xoffset=0 yoffset=0 xadvance=0
+l4xzq.fnt|595|info creator=UIBuilder
+char id=48 img=l4xz2 xoffset=0 yoffset=0 xadvance=0
+char id=49 img=l4xz4 xoffset=0 yoffset=0 xadvance=0
+char id=50 img=l4xz6 xoffset=0 yoffset=0 xadvance=0
+char id=51 img=l4xz8 xoffset=0 yoffset=0 xadvance=0
+char id=52 img=l4xza xoffset=0 yoffset=0 xadvance=0
+char id=53 img=l4xzc xoffset=0 yoffset=0 xadvance=0
+char id=54 img=l4xze xoffset=0 yoffset=0 xadvance=0
+char id=55 img=l4xzg xoffset=0 yoffset=0 xadvance=0
+char id=56 img=l4xzi xoffset=0 yoffset=0 xadvance=0
+char id=57 img=l4xzk xoffset=0 yoffset=0 xadvance=0
+char id=45 img=l4xzm xoffset=0 yoffset=0 xadvance=0
+l4xzr.xml|29|<component size="1920,1080"/>package.xml|1590|<packageDescription id="eb1m12bw" name="EmitNumbers">
+  <resources>
+    <atlas id="atlas0" size="256,256" file="atlas0.png"/>
+    <component id="l4xzr" name="Main" exported="true" size="1920,1080"/>
+    <font id="l4xzp" name="yellow_font" exported="true"/>
+    <font id="l4xzq" name="red_font" exported="true"/>
+    <image id="l4xz1" name="0(2)5.png" size="30,35"/>
+    <image id="l4xz2" name="0(4).png" size="30,35"/>
+    <image id="l4xz3" name="1(2)5.png" size="30,35"/>
+    <image id="l4xz4" name="1(4).png" size="30,35"/>
+    <image id="l4xz5" name="2(2)5.png" size="30,35"/>
+    <image id="l4xz6" name="2(4).png" size="30,35"/>
+    <image id="l4xz7" name="3(2)5.png" size="30,35"/>
+    <image id="l4xz8" name="3(4).png" size="30,35"/>
+    <image id="l4xz9" name="4(2)5.png" size="30,35"/>
+    <image id="l4xza" name="4(4).png" size="30,35"/>
+    <image id="l4xzb" name="5(2)5.png" size="30,35"/>
+    <image id="l4xzc" name="5(4).png" size="30,35"/>
+    <image id="l4xzd" name="6(2)5.png" size="30,35"/>
+    <image id="l4xze" name="6(4).png" size="30,35"/>
+    <image id="l4xzf" name="7(2)5.png" size="30,35"/>
+    <image id="l4xzg" name="7(4).png" size="30,35"/>
+    <image id="l4xzh" name="8(2)5.png" size="30,35"/>
+    <image id="l4xzi" name="8(4).png" size="30,35"/>
+    <image id="l4xzj" name="9(2)5.png" size="30,35"/>
+    <image id="l4xzk" name="9(4).png" size="30,35"/>
+    <image id="l4xzl" name="critical" size="148,83" exported="true"/>
+    <image id="l4xzm" name="m1.png" size="30,35"/>
+    <image id="l4xzn" name="m2.png" size="30,35"/>
+  </resources>
+</packageDescription>

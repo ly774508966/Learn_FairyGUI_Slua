@@ -1,0 +1,86 @@
+gok0qe.fnt|609|info creator=UIBuilder
+char id=57 img=bdjphw xoffset=0 yoffset=0 xadvance=0
+char id=56 img=bdjphn xoffset=0 yoffset=0 xadvance=0
+char id=49 img=bdjpny xoffset=0 yoffset=0 xadvance=0
+char id=55 img=bdjphc xoffset=0 yoffset=0 xadvance=0
+char id=25112 img=bdjph6 xoffset=0 yoffset=0 xadvance=0
+char id=51 img=bdjpgz xoffset=0 yoffset=0 xadvance=0
+char id=54 img=bdjpgr xoffset=0 yoffset=0 xadvance=0
+char id=53 img=bdjpgh xoffset=0 yoffset=0 xadvance=0
+char id=50 img=bdjpgg xoffset=0 yoffset=0 xadvance=0
+char id=52 img=bdjpg9 xoffset=0 yoffset=0 xadvance=0
+char id=48 img=bdjpg8 xoffset=0 yoffset=0 xadvance=0
+package.xml|5263|<packageDescription id="jphfxsyf" name="RES_COMMON_01">
+  <resources>
+    <atlas id="atlas0" size="1024,512" file="atlas0.png"/>
+    <atlas id="atlas3" size="512,512" file="atlas3.png"/>
+    <font id="gok0qe" name="mainui_zhanli_num" exported="true"/>
+    <image id="bdjp3h" name="common_c_401" size="32,40" exported="true"/>
+    <image id="bdjp3l" name="common_c_397" size="38,37" exported="true"/>
+    <image id="bdjp3n" name="common_c_395" size="74,82" exported="true"/>
+    <image id="bdjp3o" name="common_c_394" size="76,76" exported="true" scale="9grid" scale9grid="19,19,38,38"/>
+    <image id="bdjp4p" name="common_c_354" size="76,74" exported="true"/>
+    <image id="bdjp53" name="common_c_340" size="74,83" exported="true"/>
+    <image id="bdjp54" name="common_c_339" size="78,77" exported="true"/>
+    <image id="bdjp5o" name="common_c_319" size="78,87" exported="true"/>
+    <image id="bdjp6h" name="common_c_290" size="75,88" exported="true"/>
+    <image id="bdjp6l" name="common_c_286" size="80,82" exported="true"/>
+    <image id="bdjp79" name="common_c_262" size="90,84" exported="true"/>
+    <image id="bdjp7u" name="common_c_241" size="90,85" exported="true"/>
+    <image id="bdjp8g" name="common_c_219" size="90,84" exported="true"/>
+    <image id="bdjp8t" name="common_c_205" size="79,85" exported="true"/>
+    <image id="bdjp9r" name="common_c_171" size="126,34" exported="true" scale="9grid" scale9grid="32,9,64,18"/>
+    <image id="bdjp9z" name="common_c_163" size="129,37" exported="true" scale="9grid" scale9grid="33,10,66,20"/>
+    <image id="bdjpa2" name="common_c_160" size="30,31" exported="true"/>
+    <image id="bdjpaz" name="common_c_127" size="68,86" exported="true"/>
+    <image id="bdjpb1" name="common_c_125" size="130,64" exported="true"/>
+    <image id="bdjpc9" name="common_c_81" size="129,143" exported="true" scale="9grid" scale9grid="33,83,66,25"/>
+    <image id="bdjpco" name="common_c_66" size="30,30" exported="true" scale="9grid" scale9grid="8,8,16,16"/>
+    <image id="bdjpd8" name="common_c_46" size="68,89" exported="true"/>
+    <image id="bdjpdg" name="common_c_38" size="197,45" exported="true"/>
+    <image id="bdjpdk" name="common_c_34" size="197,45" exported="true"/>
+    <image id="bdjpdp" name="common_c_29" size="166,73" exported="true"/>
+    <image id="bdjpe6" name="common_c_12" size="62,89" exported="true"/>
+    <image id="bdjpez" name="mainui_c_355" size="156,131" exported="true"/>
+    <image id="bdjpf4" name="mainui_c_350" size="85,78" exported="true"/>
+    <image id="bdjpff" name="mainui_c_339" size="75,84" exported="true"/>
+    <image id="bdjpfg" name="mainui_c_338" size="74,74" exported="true"/>
+    <image id="bdjpg0" name="mainui_c_318" size="37,39" exported="true"/>
+    <image id="bdjpg8" name="mainui_c_310" size="18,24"/>
+    <image id="bdjpg9" name="mainui_c_309" size="16,23"/>
+    <image id="bdjpgg" name="mainui_c_302" size="18,23"/>
+    <image id="bdjpgh" name="mainui_c_301" size="16,24"/>
+    <image id="bdjpgr" name="mainui_c_291" size="16,24"/>
+    <image id="bdjpgx" name="mainui_c_285" size="80,65" exported="true"/>
+    <image id="bdjpgz" name="mainui_c_283" size="18,24"/>
+    <image id="bdjph6" name="mainui_c_276" size="40,26"/>
+    <image id="bdjphc" name="mainui_c_270" size="16,22"/>
+    <image id="bdjphn" name="mainui_c_259" size="16,24"/>
+    <image id="bdjphw" name="mainui_c_250" size="16,24"/>
+    <image id="bdjpic" name="mainui_c_234" size="39,39" exported="true"/>
+    <image id="bdjpif" name="mainui_c_231" size="68,81" exported="true"/>
+    <image id="bdjpju" name="mainui_c_180" size="69,92" exported="true"/>
+    <image id="bdjpkj" name="mainui_c_155" size="87,95" exported="true"/>
+    <image id="bdjpko" name="mainui_c_150" size="62,90" exported="true"/>
+    <image id="bdjpkt" name="mainui_c_145" size="80,84" exported="true"/>
+    <image id="bdjpku" name="mainui_c_144" size="73,90" exported="true"/>
+    <image id="bdjpkv" name="mainui_c_143" size="85,90" exported="true"/>
+    <image id="bdjpl0" name="mainui_c_138" size="53,49" exported="true"/>
+    <image id="bdjplt" name="mainui_c_104" size="91,92" exported="true"/>
+    <image id="bdjpm9" name="mainui_c_88" size="41,60" exported="true"/>
+    <image id="bdjpmc" name="mainui_c_85" size="118,56" exported="true"/>
+    <image id="bdjpmd" name="mainui_c_84" size="75,87" exported="true"/>
+    <image id="bdjpmk" name="mainui_c_77" size="102,84" exported="true"/>
+    <image id="bdjpms" name="mainui_c_69" size="54,56" exported="true"/>
+    <image id="bdjpn3" name="mainui_c_58" size="112,102" exported="true"/>
+    <image id="bdjpn5" name="mainui_c_56" size="122,54" exported="true"/>
+    <image id="bdjpnc" name="mainui_c_49" size="216,16" exported="true"/>
+    <image id="bdjpni" name="mainui_c_43" size="60,61" exported="true"/>
+    <image id="bdjpnm" name="mainui_c_39" size="131,11" exported="true"/>
+    <image id="bdjpnu" name="mainui_c_31" size="141,16" exported="true"/>
+    <image id="bdjpnx" name="mainui_c_28" size="296,100" exported="true"/>
+    <image id="bdjpny" name="mainui_c_27" size="12,21"/>
+    <image id="bdjpo2" name="mainui_c_23" size="224,84" exported="true"/>
+    <image id="bdjpob" name="mainui_c_14" size="302,104" exported="true"/>
+  </resources>
+</packageDescription>

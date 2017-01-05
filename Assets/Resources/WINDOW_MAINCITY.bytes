@@ -1,0 +1,313 @@
+12p1lk.xml|1011|<component size="67,67" pivot="0.5,0.5" extention="Button">
+  <controller name="show_red_dot_controller" pages="0,hide_red_dot,1,show_red_dot" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="1" transitions="*-0=show_red_dot_trans,*-1=hide_red_dot_trans"/>
+  <displayList>
+    <image id="n1" name="n1" src="bdjpms" pkg="jphfxsyf" xy="0,11" pivot="0.5,0.5" rotation="180">
+      <gearLook controller="button" pages="0,1" values="1,0,0|1,180,0" default="1,0,0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n3" name="n3" src="gok0i" xy="32,3" pivot="0.5,0.5">
+      <gearDisplay controller="show_red_dot_controller" pages="1"/>
+    </component>
+  </displayList>
+  <Button mode="Check"/>
+  <transition name="hide_red_dot_trans">
+    <item time="0" type="Visible" target="n3" value="false"/>
+  </transition>
+  <transition name="show_red_dot_trans">
+    <item time="0" type="Visible" target="n3" value="true"/>
+  </transition>
+</component>gok03.xml|1612|<component size="1280,720">
+  <controller name="show_below_menu" pages="0,hide,1,show" selected="0"/>
+  <controller name="fixed_btns_list2_show" pages="0,hide,1,show" selected="0"/>
+  <displayList>
+    <component id="n3" name="hero_info_header" src="gok06" xy="11,0"/>
+    <component id="n6" name="upright_fixed_btns_comp" src="gok0c" xy="1040,0"/>
+    <list id="n7" name="fixed_upper_btns_list_01" xy="767,0" size="285,97" layout="row" overflow="scroll" margin="0,0,0,0" defaultItem="ui://xesdorbdgok0b">
+      <item icon="ui://jphfxsyfbdjp7u"/>
+      <item icon="ui://jphfxsyfbdjp5o"/>
+      <item icon="ui://jphfxsyfbdjp79"/>
+    </list>
+    <component id="n9" name="below_menu_list_comp" src="xabaj" xy="90,730">
+      <gearXY controller="show_below_menu" pages="0,1" values="90,730|90,623" default="90,623" tween="true" duration="0.5"/>
+    </component>
+    <component id="n12" name="btn_show_below_menu" src="12p1lk" xy="27,627" pivot="0.5,0.5">
+      <Button controller="show_below_menu" page="1"/>
+    </component>
+    <component id="n13" name="btn_show_up_menu" src="gok0h" xy="1057,11" pivot="0.5,0.5">
+      <gearDisplay controller="show_below_menu" pages=""/>
+    </component>
+    <component id="n15" name="n15" src="rg3ul" xy="1,149"/>
+    <list id="n16" name="fixed_upper_btns_list_02" xy="848,100" size="196,97" layout="row" overflow="scroll" margin="0,0,0,0" defaultItem="ui://xesdorbdgok0b" align="right">
+      <gearDisplay controller="fixed_btns_list2_show" pages="1"/>
+      <item icon="ui://jphfxsyfbdjp7u"/>
+      <item icon="ui://jphfxsyfbdjp8g"/>
+    </list>
+  </displayList>
+</component>gok06.xml|914|<component size="375,107">
+  <displayList>
+    <component id="n6" name="progress_bar_red" src="gok09" xy="74,14" size="216,22">
+      <ProgressBar value="148" max="358"/>
+    </component>
+    <component id="n5" name="progress_bar_blue" src="gok0a" xy="99,35" size="193,21">
+      <ProgressBar value="15" max="19"/>
+    </component>
+    <image id="n0" name="n0" src="bdjpnx" pkg="jphfxsyf" xy="8,5"/>
+    <loader id="n1" name="player_photo" xy="18,10" size="73,75" url="ui://jphfxsyfbdjpkj" align="center" vAlign="middle"/>
+    <image id="n2" name="n2" src="bdjpl0" pkg="jphfxsyf" xy="308,9"/>
+    <text id="n8" name="fight_power_value" xy="117,56" size="165,32" font="ui://jphfxsyfgok0qe" fontSize="12" color="#ffffff" vAlign="middle" autoSize="none" text="战力845"/>
+    <loader id="n9" name="job_title" xy="0,45" size="43,62" url="ui://jphfxsyfbdjpg0" align="center" vAlign="middle"/>
+  </displayList>
+</component>gok09.xml|692|<component size="216,16" extention="ProgressBar">
+  <displayList>
+    <image id="n1" name="n1" src="bdjpnu" pkg="jphfxsyf" xy="0,0" size="216,16">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2" name="bar" src="bdjpnc" pkg="jphfxsyf" xy="0,0" size="216,16">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3" name="title" xy="0,-2" size="216,24" font="微软雅黑" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="358/358">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ProgressBar titleType="valueAndmax"/>
+</component>gok0a.xml|690|<component size="141,16" extention="ProgressBar">
+  <displayList>
+    <image id="n1" name="n1" src="bdjpnu" pkg="jphfxsyf" xy="0,0" size="141,16">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2" name="bar" src="bdjpnm" pkg="jphfxsyf" xy="0,2" size="141,11">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3" name="title" xy="0,-3" size="141,25" font="微软雅黑" fontSize="15" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="19/19">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ProgressBar titleType="valueAndmax"/>
+</component>gok0b.xml|974|<component size="92,92" extention="Button">
+  <controller name="show_red_dot" pages="0,hide,1,show" selected="0"/>
+  <controller name="btn_locked" pages="0,unlock,1,locked" selected="0"/>
+  <displayList>
+    <image id="n0" name="btn_bg_img" src="bdjp54" pkg="jphfxsyf" xy="8,0" size="78,73">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n1" name="icon" xy="4,1" size="83,83" url="ui://jphfxsyfbdjp79" align="center" vAlign="middle">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <image id="n3" name="btn_locked_img" src="bdjpgx" pkg="jphfxsyf" xy="7,18">
+      <gearDisplay controller="btn_locked" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n5" name="n5" src="gok0i" xy="62,1" pivot="0.5,0.5">
+      <gearDisplay controller="show_red_dot" pages="1"/>
+    </component>
+  </displayList>
+  <Button mode="Radio"/>
+</component>gok0c.xml|533|<component size="241,325" extention="Button">
+  <displayList>
+    <component id="n2" name="btn_map" src="gok0b" xy="142,133">
+      <Button icon="ui://jphfxsyfbdjpkv"/>
+    </component>
+    <component id="n3" name="btn_daily" src="gok0b" xy="45,133">
+      <Button icon="ui://jphfxsyfbdjp3n"/>
+    </component>
+    <component id="n5" name="btn_chapter" src="gok0d" xy="86,-5"/>
+    <component id="n6" name="btn_func_forecast" src="gok0e" xy="5,230"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.80"/>
+</component>gok0d.xml|491|<component size="155,130" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n1" name="n1" src="bdjpez" pkg="jphfxsyf" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n2" name="icon" xy="33,16" size="103,103" url="ui://jphfxsyfbdjpn3" align="center" vAlign="middle"/>
+  </displayList>
+  <Button downEffect="dark" downEffectValue="0.80"/>
+</component>gok0e.xml|949|<component size="226,92" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n1" name="n1" src="bdjpo2" pkg="jphfxsyf" xy="0,3">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n2" name="icon" xy="140,7" size="78,77" url="ui://jphfxsyfbdjpio" align="center" vAlign="middle"/>
+    <text id="n3" name="function_title_text" xy="13,20" size="126,23" font="微软雅黑" fontSize="16" color="#e0bc6d" align="center" vAlign="middle" letterSpacing="4" autoSize="none" strokeColor="#5b2e1b" strokeSize="2" text="特殊技能魔戒"/>
+    <text id="n4" name="function_level_text" xy="9,48" size="132,23" font="微软雅黑" fontSize="16" color="#27de03" align="center" vAlign="middle" letterSpacing="3" autoSize="none" strokeColor="#592e16" strokeSize="2" text="37级任务开启"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.80"/>
+</component>gok0h.xml|989|<component size="67,67" pivot="0.5,0.5" extention="Button">
+  <controller name="show_red_dot_controller" pages="0,hide_red_dot,1,show_red_dot" selected="1"/>
+  <controller name="button" pages="0,up,1,down" selected="1" transitions="*-0=show_red_dot_trans,*-1=hide_red_dot_trans"/>
+  <displayList>
+    <image id="n1" name="n1" src="bdjpms" pkg="jphfxsyf" xy="11,-1" pivot="0.5,0.5">
+      <gearLook controller="button" pages="1" values="1,0,0" default="1,180,0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n3" name="n3" src="gok0i" xy="1,34" pivot="0.5,0.5">
+      <gearDisplay controller="show_red_dot_controller" pages="1"/>
+    </component>
+  </displayList>
+  <Button mode="Check"/>
+  <transition name="hide_red_dot_trans">
+    <item time="0" type="Visible" target="n3" value="false"/>
+  </transition>
+  <transition name="show_red_dot_trans">
+    <item time="0" type="Visible" target="n3" value="true"/>
+  </transition>
+</component>gok0i.xml|984|<component size="30,31" pivot="0.5,0.5" extention="Button">
+  <displayList>
+    <image id="n1" name="n1" src="bdjpa2" pkg="jphfxsyf" xy="0,0" pivot="0.5,0.5">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+  </displayList>
+  <Button/>
+  <transition name="red_dot_trans" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="Scale" target="n1" tween="true" startValue="1,1" endValue="1,1" duration="24"/>
+    <item time="24" type="Scale" target="n1" tween="true" startValue="1,1" endValue="0.8,0.8" duration="4"/>
+    <item time="28" type="Scale" target="n1" tween="true" startValue="0.8,0.8" endValue="1,1" duration="4"/>
+    <item time="32" type="Scale" target="n1" tween="true" startValue="1,1" endValue="0.8,0.8" duration="4"/>
+    <item time="36" type="Scale" target="n1" tween="true" startValue="0.8,0.8" endValue="1,1" duration="4"/>
+    <item time="40" type="Scale" target="n1" tween="true" startValue="1,1"/>
+  </transition>
+</component>package.xml|1609|<packageDescription id="xesdorbd" name="WINDOW_MAINCITY">
+  <resources>
+    <component id="12p1lk" name="button_triangle_menu_bottom" size="67,67"/>
+    <component id="gok03" name="WINDOW_MAINCITY" exported="true" size="1280,720"/>
+    <component id="gok06" name="hero_info_header" size="375,107"/>
+    <component id="gok09" name="progress_bar_red" size="216,16"/>
+    <component id="gok0a" name="progress_bar_blue" size="141,16"/>
+    <component id="gok0b" name="button_normal_01" size="92,92"/>
+    <component id="gok0c" name="upright_fixed_btns_comp" size="241,325"/>
+    <component id="gok0d" name="button_chapter" size="155,130"/>
+    <component id="gok0e" name="button_function_forecast" size="226,92"/>
+    <component id="gok0h" name="button_triangle_menu_top" size="67,67"/>
+    <component id="gok0i" name="button_red_dot" size="30,31"/>
+    <component id="rg3ul" name="tab_task_team_comp" size="312,303"/>
+    <component id="rg3um" name="button_radio_tab_top" size="122,54"/>
+    <component id="rg3un" name="task_resident_comp" size="312,70"/>
+    <component id="rg3up" name="progress_bar_green" size="197,64"/>
+    <component id="rg3uq" name="maintask_item" size="312,67"/>
+    <component id="rg3ur" name="boot_ani" size="55,65"/>
+    <component id="s122s" name="branch_task_item" size="312,67"/>
+    <component id="s122u" name="tab_team_comp" size="312,123"/>
+    <component id="s122v" name="button_create_team" size="244,90"/>
+    <component id="s122w" name="tab_task_comp" size="312,243"/>
+    <component id="xabaj" name="blow_menu_list_comp" size="1187,97"/>
+  </resources>
+</packageDescription>rg3ul.xml|744|<component size="312,303">
+  <controller name="tab_task_or_team" pages="0,task,1,team" selected="0"/>
+  <displayList>
+    <component id="n1" name="btn_task" src="rg3um" xy="4,7">
+      <Button checked="true" title="任务" controller="tab_task_or_team" page="0"/>
+    </component>
+    <component id="n2" name="btn_team" src="rg3um" xy="126,7">
+      <Button title="组队" controller="tab_task_or_team" page="1"/>
+    </component>
+    <component id="n10" name="tab_task_comp" src="s122w" xy="0,61">
+      <gearDisplay controller="tab_task_or_team" pages="0"/>
+    </component>
+    <component id="n11" name="tab_team_comp" src="s122u" xy="0,61">
+      <gearDisplay controller="tab_task_or_team" pages="1"/>
+    </component>
+  </displayList>
+</component>rg3um.xml|1007|<component size="122,54" extention="Button">
+  <controller name="button" pages="1,up,0,down" selected="1"/>
+  <displayList>
+    <image id="n0" name="n0" src="bdjpmc" pkg="jphfxsyf" xy="0,0" size="122,54">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1" name="n1" src="bdjpn5" pkg="jphfxsyf" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n2" name="title" xy="0,0" size="122,54" font="微软雅黑" fontSize="24" color="#cdcdbd" align="center" vAlign="middle" letterSpacing="4" autoSize="none" strokeColor="#906d4e" strokeSize="2" text="任  务">
+      <relation target="" sidePair="width-width,height-height"/>
+      <gearColor controller="button" pages="1,0" values="#ad9574|#cdcdbd" default="#ffffff"/>
+    </text>
+  </displayList>
+  <Button mode="Check" downEffect="dark" downEffectValue="0.80"/>
+</component>rg3un.xml|904|<component size="312,70" overflow="hidden" extention="Button">
+  <displayList>
+    <image id="n10" name="n10" src="bdjp9r" pkg="jphfxsyf" xy="-3,-4" size="294,78" alpha="0.78" color="#a7a7a7"/>
+    <image id="n4" name="n4" src="bdjpni" pkg="jphfxsyf" xy="4,7"/>
+    <loader id="n0" name="icon" xy="4,7" size="60,61"/>
+    <text id="n5" name="instance_title" xy="69,12" size="86,27" blend="none" fontSize="20" color="#fb7a2e" autoSize="none" strokeColor="#2f3435" strokeSize="2" text="漩光之戒"/>
+    <text id="n7" name="instance_subtitle" xy="153,16" size="109,27" blend="none" fontSize="16" color="#be9967" letterSpacing="2" autoSize="none" strokeColor="#61503a" strokeSize="2" text="(诺玛村庄)"/>
+    <component id="n9" name="n9" src="rg3up" xy="71,42" size="175,20">
+      <ProgressBar value="43" max="100"/>
+    </component>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="0.80"/>
+</component>rg3up.xml|651|<component size="197,64" extention="ProgressBar">
+  <displayList>
+    <image id="n1" name="n1" src="bdjpdk" pkg="jphfxsyf" xy="0,0" size="197,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2" name="bar" src="bdjpdg" pkg="jphfxsyf" xy="0,0" size="197,64">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n3" name="title" xy="0,0" size="197,64" fontSize="12" color="#ffffff" align="center" vAlign="middle" autoSize="none" text="12%">
+      <relation target="" sidePair="width-width,height-height"/>
+    </text>
+  </displayList>
+  <ProgressBar/>
+</component>rg3uq.xml|586|<component size="312,67">
+  <displayList>
+    <image id="n6" name="n6" src="bdjp9r" pkg="jphfxsyf" xy="-3,-4" size="294,71" alpha="0.78" color="#a7a7a7"/>
+    <component id="n4" name="n4" src="rg3ur" xy="7,1"/>
+    <text id="n7" name="n7" xy="62,6" size="174,27" fontSize="20" color="#d8d31e" autoSize="none" strokeColor="#353400" strokeSize="2" text="[主][Lv.1]黑暗笼罩"/>
+    <richtext id="n8" name="n8" xy="63,36" size="152,29" font="微软雅黑" fontSize="18" color="#c7c1bb" ubb="true" autoSize="none" strokeColor="#4e3e2a" text="与[color=#259601]塔空贤者[/color]交谈"/>
+  </displayList>
+</component>rg3ur.xml|598|<component size="55,65">
+  <displayList>
+    <image id="n1" name="n1" src="bdjp3l" pkg="jphfxsyf" xy="0,0" size="55,67" alpha="0.7"/>
+    <image id="n0" name="n0" src="bdjp3h" pkg="jphfxsyf" xy="11,18"/>
+  </displayList>
+  <transition name="boot_ani" autoPlay="true" autoPlayRepeat="-1">
+    <item time="0" type="XY" target="n0" tween="true" startValue="-,18" endValue="-,7" duration="24"/>
+    <item time="24" type="XY" target="n0" tween="true" startValue="-,7" endValue="-,18" duration="24"/>
+    <item time="48" type="XY" target="n0" tween="true" startValue="-,18"/>
+  </transition>
+</component>s122s.xml|623|<component size="312,67" extention="Button">
+  <displayList>
+    <image id="n6" name="n6" src="bdjp9r" pkg="jphfxsyf" xy="-3,-4" size="294,72" alpha="0.78" color="#a7a7a7"/>
+    <text id="n7" name="n7" xy="5,2" size="255,27" fontSize="20" color="#d8d31e" autoSize="none" strokeColor="#353400" strokeSize="2" text="[支][Lv.130]抢Boss"/>
+    <richtext id="n8" name="n8" xy="5,32" size="255,29" font="微软雅黑" fontSize="18" color="#c7c1bb" ubb="true" autoSize="none" strokeColor="#4e3e2a" text="杀死一只[color=#259601]世界Boss[/color]0/1"/>
+  </displayList>
+  <Button mode="Radio" downEffect="scale" downEffectValue="0.80"/>
+</component>s122u.xml|257|<component size="312,123">
+  <displayList>
+    <image id="n0" name="n0" src="bdjp9r" pkg="jphfxsyf" xy="-3,-4" size="294,132" alpha="0.78" color="#a7a7a7"/>
+    <component id="n2" name="n2" src="s122v" xy="1,13" size="312,90"/>
+  </displayList>
+</component>s122v.xml|303|<component size="244,90" extention="Button">
+  <displayList>
+    <text id="n0" name="n0" xy="41,31" size="166,33" fontSize="21" color="#ffffff" align="center" vAlign="middle" letterSpacing="2" autoSize="none" strokeColor="#3d2e1b" strokeSize="2" text="点击进入组队"/>
+  </displayList>
+  <Button/>
+</component>s122w.xml|375|<component size="312,243">
+  <displayList>
+    <component id="n0" name="n0" src="rg3un" xy="0,-1"/>
+    <list id="n1" name="task_list" xy="0,70" size="312,170" overflow="scroll" margin="0,0,0,0" lineGap="1" defaultItem="ui://xesdorbds122s">
+      <item url="ui://xesdorbdrg3uq" icon="ui://xesdorbdrg3uq"/>
+      <item/>
+      <item/>
+    </list>
+  </displayList>
+</component>xabaj.xml|661|<component size="1187,97">
+  <displayList>
+    <list id="n0" name="n0" xy="-1,1" size="1189,95" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,0,0" colGap="-1" defaultItem="ui://xesdorbdgok0b">
+      <item icon="ui://jphfxsyfbdjpko"/>
+      <item icon="ui://jphfxsyfbdjpju"/>
+      <item icon="ui://jphfxsyfbdjpff"/>
+      <item icon="ui://jphfxsyfbdjpmd"/>
+      <item icon="ui://jphfxsyfbdjpku"/>
+      <item icon="ui://jphfxsyfbdjp8t"/>
+      <item icon="ui://jphfxsyfbdjplt"/>
+      <item icon="ui://jphfxsyfbdjpif"/>
+      <item icon="ui://jphfxsyfbdjp6h"/>
+      <item icon="ui://jphfxsyfbdjpkt"/>
+    </list>
+  </displayList>
+</component>

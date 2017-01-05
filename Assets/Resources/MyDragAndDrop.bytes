@@ -29,7 +29,8 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
     <movieclip id="n1" name="n1" src="duwkj" xy="0,0"/>
   </displayList>
   <Button downEffect="scale" downEffectValue="0.80"/>
-</component>fm8x7.xml|1491|<component size="800,600">
+</component>fm8x7.xml|1751|<component size="800,600">
+  <controller name="c1" pages="0,1,1,1" selected="0"/>
   <displayList>
     <component id="n6" name="label_long" src="hx0wg" xy="128,472" size="300,29" visible="false">
       <Label title="&lt;-- 世界还小我陪你去看天涯海角 -->"/>
@@ -39,7 +40,7 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
     </component>
     <component id="n14" name="textfield" src="xunzh" xy="19,30" visible="false"/>
     <image id="n15" name="image_origin" src="fm8x1" xy="58,273" visible="false" fillMethod="hz"/>
-    <component id="n16" name="n16" src="duwkl" xy="482,30" visible="false"/>
+    <component id="n16" name="n16" src="duwkl" xy="473,55" visible="false"/>
     <graph id="n18" name="hodler" xy="49,191" size="65,58" visible="false"/>
     <component id="n19" name="progress_01" src="dhbhm" xy="80,367" size="567,48">
       <ProgressBar value="1" max="100"/>
@@ -53,6 +54,8 @@ dhbhm.xml|474|<component size="50,10" extention="ProgressBar">
     </component>
     <component id="n26" name="my_button" src="km0cr" xy="574,234" size="128,49"/>
     <text id="n27" name="type_text" xy="133,184" size="400,58" fontSize="16" align="center" vAlign="middle" autoSize="none" text="type"/>
+    <text id="n28" name="text" xy="660,51" size="100,33" fontSize="12" autoSize="none" text="text1"/>
+    <text id="n29" name="text" xy="659,111" size="100,33" fontSize="12" autoSize="none" text="text2"/>
   </displayList>
 </component>gtg9n.xml|868|<component size="10,19" extention="Button">
   <Button/>

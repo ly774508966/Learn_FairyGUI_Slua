@@ -21,25 +21,56 @@ public class ScrollPaneMain : MonoBehaviour {
 	void Start () {
         _mainView = this.GetComponent<UIPanel>().ui;
 
-        _list = _mainView.GetChild("list").asList;
-        _list.itemRenderer = RenderListItem;
-        _list.SetVirtual();
-        _list.numItems = 1000;
-        _list.onTouchBegin.Add(OnClickList);
-        _list.onClickItem.Add(OnClickListItem);
+        //_list = _mainView.GetChild("list").asList;
+        //_list.itemRenderer = RenderListItem;
+        //_list.SetVirtual();
+        //_list.numItems = 1000;
+        //_list.onTouchBegin.Add(OnClickList);
+        //_list.onClickItem.Add(OnClickListItem);
 
-        _mainView.GetChild("box").asCom.onDrop.Add(OnDrop);
+        //_mainView.GetChild("box").asCom.onDrop.Add(OnDrop);
 
-        LongPressGesture gesture = new LongPressGesture(_list);
-        gesture.once = true;
-        gesture.trigger = 1f;
-        gesture.onAction.Add(OnLongPress);
 
-        holder = _mainView.GetChild("holder").asGraph;
-        prefab = Resources.Load("Particles/Fire/Flame");
+        //LongPressGesture gesture = new LongPressGesture(_list);
+        //gesture.once = true;
+        //gesture.trigger = 1f;
+        //gesture.onAction.Add(OnLongPress);
+
+        //holder = _mainView.GetChild("holder").asGraph;
+        //prefab = Resources.Load("Particles/Fire/Flame");
         
-        go = (GameObject)Object.Instantiate(prefab);
-        holder.SetNativeObject(new GoWrapper(go));
+        //go = (GameObject)Object.Instantiate(prefab);
+        //holder.SetNativeObject(new GoWrapper(go));
+
+
+        BlurFilter blurFilter = new BlurFilter();
+        blurFilter.blurSize = 15;
+        _mainView.GetChild("toumingimg").filter = blurFilter;
+
+        Debug.Log("-------------------------------");
+
+        Debug.Log(blurFilter.target);
+
+        BlurFilter blurFilter1 = new BlurFilter();
+        blurFilter1.blurSize = 2;
+        _mainView.GetChild("logo").filter = blurFilter1;
+
+        Debug.Log(blurFilter1.target);
+
+        BlurFilter blurFilter2 = new BlurFilter();
+        blurFilter2.blurSize = 20;
+        _mainView.GetChild("graph").filter = blurFilter2;
+
+        Debug.Log(blurFilter2.target);
+
+        
+        BlurFilter blurFilter3 = new BlurFilter();
+        blurFilter3.blurSize = 20;
+        _mainView.GetChild("kongbai").filter = blurFilter3;
+
+        Debug.Log(blurFilter3.target);
+
+
 	}
 
     void RenderListItem(int index, GObject obj)

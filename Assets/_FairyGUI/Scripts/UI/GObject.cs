@@ -896,7 +896,13 @@ namespace FairyGUI
 		virtual public IFilter filter
 		{
 			get { return displayObject != null ? displayObject.filter : null; }
-			set { if (displayObject != null) displayObject.filter = value; }
+			set {
+                if (displayObject != null)
+                    displayObject.filter = value;
+                else 
+                    Debug.Log("displayObj is nil -----------  " + this);
+                
+            }
 		}
 
 		/// <summary>

@@ -7,6 +7,7 @@ public class GestureMain : MonoBehaviour {
 
     GComponent _mainView;
     Transform _ball;
+    Transform _npc;
 
     void Awake()
     {
@@ -19,22 +20,45 @@ public class GestureMain : MonoBehaviour {
         _mainView = this.GetComponent<UIPanel>().ui;
         GObject holder = _mainView.GetChild("holder");
 
+        // ball
         _ball = GameObject.Find("Globe").transform;
-
+       
         SwipeGesture gesture1 = new SwipeGesture(holder);
         gesture1.onMove.Add(OnSwipeMove);
         gesture1.onEnd.Add(OnSwipeEnd);
 
-        //LongPressGesture gesture2 = new LongPressGesture(holder);
-        //gesture2.once = false;
-        //gesture2.onAction.Add(OnHold);
+        LongPressGesture gesture2 = new LongPressGesture(holder);
+        gesture2.once = false;
+        gesture2.onAction.Add(OnHold);
 
-        //PinchGesture gesture3 = new PinchGesture(holder);
-        //gesture3.onAction.Add(OnPinch);
+        PinchGesture gesture3 = new PinchGesture(holder);
+        gesture3.onAction.Add(OnPinch);
 
-        //RotationGesture gesture4 = new RotationGesture(holder);
-        //gesture4.onAction.Add(OnRotate);
+        RotationGesture gesture4 = new RotationGesture(holder);
+        gesture4.onAction.Add(OnRotate);
+
+        // npc 只能横向动
+        GObject holder_npc = _mainView.GetChild("holder_npc");
+        _npc = GameObject.Find("npc").transform;
+
+        SwipeGesture gesture1_npc = new SwipeGesture(holder_npc);
+        gesture1_npc.onMove.Add(OnSwipeMove_npc);
 	}
+
+    void OnSwipeMove_npc(EventContext context)
+    {
+        SwipeGesture gesture = (SwipeGesture)context.sender;
+        Vector3 v = new Vector3();
+        if (Mathf.Abs(gesture.delta.x) > Mathf.Abs(gesture.delta.y))
+        {
+            v.y = -Mathf.Round(gesture.delta.x);
+            if (Mathf.Abs(v.y) < 2)  // 消除手抖影响
+            {
+                return;
+            }
+        }
+        _npc.Rotate(v, Space.World);
+    }
 
     void OnSwipeMove(EventContext context)
     {
@@ -50,9 +74,10 @@ public class GestureMain : MonoBehaviour {
         }
         else
         {
-            v.x = - Mathf.Round(gesture.delta.y);
-            if(Mathf.Abs(v.x) < 2){
-                   return;
+            v.x = -Mathf.Round(gesture.delta.y);
+            if (Mathf.Abs(v.x) < 2)
+            {
+                return;
             }
         }
         _ball.Rotate(v, Space.World);

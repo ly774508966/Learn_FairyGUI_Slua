@@ -1,17 +1,23 @@
-jcqd5.xml|923|<component size="1136,640">
+jcqd5.xml|1492|<component size="1136,640">
   <displayList>
-    <graph id="n1" name="n1" xy="0,0" size="474,640" type="rect"/>
-    <list id="n0" name="list" xy="-2,1" size="472,638" overflow="scroll" margin="0,0,0,0" defaultItem="ui://olan5v3ojcqd6">
+    <image id="n12" name="n12" src="jcqd4" xy="793,183"/>
+    <image id="n11" name="n11" src="jcqd4" xy="650,62"/>
+    <graph id="n8" name="graph" xy="578,14" size="540,561" alpha="0.58" type="rect" fillColor="#ffcccccc"/>
+    <graph id="n1" name="n1" xy="42,3" size="474,640" visible="false" type="rect"/>
+    <list id="n0" name="list" xy="42,2" size="472,638" visible="false" overflow="scroll" margin="0,0,0,0" defaultItem="ui://olan5v3ojcqd6">
       <relation target="" sidePair="width-width,height-height"/>
       <item/>
       <item/>
       <item/>
       <item/>
     </list>
-    <component id="n2" name="box" src="jcqd9" xy="652,354"/>
-    <text id="n3" name="n3" xy="518,32" size="557,111" fontSize="24" color="#ffffff" autoSize="none" strokeColor="#000000" text="* Drag vertically to scroll the whole list.&#xA;* Drag horizontally to scroll single item.&#xA;* Hold and drag one item to the green box."/>
-    <text id="n4" name="txt" xy="705,411" size="252,28" fontSize="24" color="#ffffff" autoSize="none" strokeColor="#000000" text=""/>
-    <graph id="n5" name="holder" xy="813,514" size="66,67"/>
+    <component id="n2" name="box" src="jcqd9" xy="652,354" visible="false"/>
+    <text id="n3" name="n3" xy="518,32" size="557,111" visible="false" fontSize="24" color="#ffffff" autoSize="none" strokeColor="#000000" text="* Drag vertically to scroll the whole list.&#xA;* Drag horizontally to scroll single item.&#xA;* Hold and drag one item to the green box."/>
+    <text id="n4" name="txt" xy="705,411" size="252,28" visible="false" fontSize="24" color="#ffffff" autoSize="none" strokeColor="#000000" text=""/>
+    <graph id="n5" name="holder" xy="813,514" size="66,67" visible="false"/>
+    <image id="n7" name="logo" src="jcqd4" xy="7,506" size="286,112"/>
+    <image id="n9" name="toumingimg" src="lwiba" xy="-5,-7" size="412,493"/>
+    <graph id="n10" name="kongbai" xy="346,512" size="200,108" lineSize="18" lineColor="#ff33cc66"/>
   </displayList>
 </component>jcqd6.xml|1278|<component size="720,88" overflow="scroll" scroll="horizontal" extention="Button">
   <displayList>
@@ -52,7 +58,7 @@ jcqd5.xml|923|<component size="1136,640">
   <displayList>
     <graph id="n0" name="n0" xy="0,0" size="350,191" type="rect" fillColor="#ff006633"/>
   </displayList>
-</component>package.xml|614|<packageDescription id="olan5v3o" name="ScrollPane">
+</component>package.xml|671|<packageDescription id="olan5v3o" name="ScrollPane">
   <resources>
     <atlas id="atlas0" size="128,128" file="atlas0.png"/>
     <atlas id="atlas1" size="64,32" file="atlas1.png"/>
@@ -63,5 +69,6 @@ jcqd5.xml|923|<component size="1136,640">
     <component id="jcqd9" name="Box" size="350,191"/>
     <image id="jcqd3" name="Seperator1" size="39,2"/>
     <image id="jcqd4" name="logo" size="86,86"/>
+    <image id="lwiba" name="common_c_174" size="34,34"/>
   </resources>
 </packageDescription>

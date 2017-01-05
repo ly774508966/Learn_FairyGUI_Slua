@@ -6,6 +6,8 @@ public class HeadBarMain : MonoBehaviour {
 
     GComponent _mainView;
 
+    string ss = "ui://21gc3jcpoi6k4";
+
 	// Use this for initialization
 	void Start () {
         Application.targetFrameRate = 60;
@@ -18,7 +20,11 @@ public class HeadBarMain : MonoBehaviour {
 
         Transform npc = GameObject.Find("npc1").transform;
         UIPanel panel = npc.FindChild("HeadBar").GetComponent<UIPanel>();
-        panel.ui.GetChild("name").text = "Long [color=#FFFFFF]LongName[/color][img]ui://21gc3jcpoi6k3[/img] Name";
+        GRichTextField richTextNpc1 = panel.ui.GetChild("name").asRichTextField;
+        richTextNpc1.text = "Long [color=#FFFFFF]LongName[/color]<a href='http://www.baidu.com><img src='ui://21gc3jcpoi6k4'/></a> Name";  //<a href=’xx><img src=’yy’/></a>
+        richTextNpc1.onClickLink.Add(() => {
+            Debug.Log("click rich text img ");
+        });
         panel.ui.GetChild("blood").asProgress.value = 80;
         panel.ui.GetChild("sign").asLoader.url = UIPackage.GetItemURL("HeaderBar", "task");
 

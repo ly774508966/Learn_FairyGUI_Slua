@@ -1,0 +1,31 @@
+glhh8.xml|162|<component size="248,460" extention="Button">
+  <displayList>
+    <loader id="n0" name="icon" xy="0,41" size="248,378"/>
+  </displayList>
+  <Button/>
+</component>glhh9.xml|882|<component size="1136,640">
+  <displayList>
+    <graph id="n5" name="n5" xy="10,4" size="1119,634" type="rect" lineColor="#ffffccff" fillColor="#ffffffcc"/>
+    <list id="n1" name="list" xy="176,70" size="784,460" layout="row" overflow="scroll" scroll="horizontal" margin="0,0,20,0" colGap="20" defaultItem="ui://wudwsdbaglhh8">
+      <item icon="ui://wudwsdbaglhh3"/>
+      <item icon="ui://wudwsdbaglhh4"/>
+      <item icon="ui://wudwsdbaglhh5"/>
+    </list>
+    <text id="n2" name="n2" xy="330,562" size="327,32" group="n4" fontSize="28" color="#ffffff" text="Index of the middle is:"/>
+    <text id="n3" name="n3" xy="660,561" size="145,32" group="n4" fontSize="28" color="#ffffff" autoSize="height" text=""/>
+    <group id="n4" name="n4" xy="330,561" size="475,33" advanced="true">
+      <relation target="" sidePair="center-center"/>
+    </group>
+  </displayList>
+</component>package.xml|619|<packageDescription id="wudwsdba" name="LoopList">
+  <resources>
+    <atlas id="atlas0" size="256,2048" file="atlas0.png"/>
+    <component id="glhh8" name="item" size="248,460"/>
+    <component id="glhh9" name="LoopListWin" exported="true" size="1136,640"/>
+    <image id="glhh3" name="n1" size="248,378" exported="true"/>
+    <image id="glhh4" name="n2" size="248,378" exported="true"/>
+    <image id="glhh5" name="n3" size="248,378" exported="true"/>
+    <image id="glhh6" name="n4" size="248,378" exported="true"/>
+    <image id="glhh7" name="n5" size="248,378" exported="true"/>
+  </resources>
+</packageDescription>

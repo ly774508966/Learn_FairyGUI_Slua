@@ -54,7 +54,11 @@ public class BagMain : MonoBehaviour {
         btn_test = _mainView.GetChild("my_button").asButton;
         text_type = _mainView.GetChild("type_text").asTextField;
 
-        
+        GTextField text1 = _mainView.GetChild("text").asTextField;
+        text1.text = "aaaa";
+
+        GTextField text2 = _mainView.GetChild("text").asTextField;
+        text2.text = "bbbbb";
 
         btn_test.onClick.Add(delegate() {
 

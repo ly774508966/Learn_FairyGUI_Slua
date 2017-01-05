@@ -77,19 +77,26 @@
   <ItemGroup>
     <Compile Include="Assets\DragDropTest.cs" />
     <Compile Include="Assets\Extension.cs" />
-    <Compile Include="Assets\GestureMain.cs" />
     <Compile Include="Assets\HeadBarMain.cs" />
+    <Compile Include="Assets\LoopListMain.cs" />
+    <Compile Include="Assets\MainCityTest.cs" />
     <Compile Include="Assets\MyPlugins\LeanTween\iTween.cs" />
     <Compile Include="Assets\Scripts\AppMain.cs" />
     <Compile Include="Assets\Scripts\Bag\BagMain.cs" />
     <Compile Include="Assets\Scripts\Bag\BagWindow.cs" />
     <Compile Include="Assets\Scripts\Bag\IconManager.cs" />
     <Compile Include="Assets\Scripts\Bag\MyGLoader.cs" />
+    <Compile Include="Assets\Scripts\EmitManager\EmitComponent.cs" />
+    <Compile Include="Assets\Scripts\EmitManager\EmitManager.cs" />
+    <Compile Include="Assets\Scripts\EmitManager\EmitNumbersMain.cs" />
+    <Compile Include="Assets\Scripts\Gesture\GestureMain.cs" />
     <Compile Include="Assets\Scripts\ScrollPane\ScrollPaneMain.cs" />
     <Compile Include="Assets\Scripts\TurnCard\Card.cs" />
     <Compile Include="Assets\Scripts\TurnCard\OneCard.cs" />
     <Compile Include="Assets\Scripts\TurnCard\OneCardMain.cs" />
     <Compile Include="Assets\Scripts\TurnCard\TurnCardMain.cs" />
+    <Compile Include="Assets\Scripts\VirtualList\MailItem.cs" />
+    <Compile Include="Assets\Scripts\VirtualList\VirtualListMain.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\BindUnity.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\BindUnityUI.cs" />
     <Compile Include="Assets\Slua\LuaObject\Unity\LuaDelegate_UnityEngine_Application_AdvertisingIdentifierCallback.cs" />

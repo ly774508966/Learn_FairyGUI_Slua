@@ -1,6 +1,6 @@
-fhv3a.xml|302|<component size="1920,1080" pivot="0.5,1" anchor="true">
+fhv3a.xml|324|<component size="1920,1080" pivot="0.5,1" anchor="true">
   <displayList>
-    <richtext id="n0" name="name" xy="870,526" size="180,28" fontSize="24" color="#ff6633" ubb="true" strokeColor="#000000" text="Long [color=#FFFFFF]Long[/color][img]ui://21gc3jcpoi6k3[/img] Name"/>
+    <richtext id="n0" name="name" xy="870,526" size="118,28" fontSize="24" color="#ff6633" ubb="true" strokeColor="#000000" text="Long [color=#FFFFFF]Long[/color]&lt;a href='xx>[img]ui://21gc3jcpoi6k3[/img]&lt;/a> Name"/>
   </displayList>
 </component>oi6k3.xml|166|<movieclip interval="41" frameCount="2">
   <frames>
